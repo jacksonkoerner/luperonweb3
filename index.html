@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tropical Marina | Safe Harbor in Luperón Bay, Dominican Republic</title>
+
+    <meta name="description" content="Tropical Marina offers secure berthing, expert boatyard services, and hurricane storage in Luperón Bay - one of the Caribbean's safest natural harbors. Full-service marina for cruising sailors.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+ 
+
+        :root {
+
+            --primary-dark: #0a1628;
+
+            --secondary-dark: #132337;
+
+            --accent-blue: #1a3a5c;
+
+            --highlight: #3d8bc9;
+
+            --text-light: #ffffff;
+
+            --text-muted: #a8b5c4;
+
+            --text-warm: #e8dcc4;
+
+            --ocean-gradient: linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #2d5a7b 100%);
+
+        }
+
+ 
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+ 
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: var(--primary-dark);
+
+            color: var(--text-light);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+ 
+
+        /* Navigation */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            z-index: 1000;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.95) 0%, rgba(10, 22, 40, 0) 100%);
+
+            transition: background 0.3s ease;
+
+        }
+
+ 
+
+        nav.scrolled {
+
+            background: rgba(10, 22, 40, 0.98);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+ 
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+        }
+
+ 
+
+        .logo-main {
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            color: var(--text-light);
+
+            text-decoration: none;
+
+            border: 2px solid var(--text-light);
+
+            padding: 8px 16px;
+
+        }
+
+
+
+        .logo-sub {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: var(--text-muted);
+
+            margin-top: 4px;
+
+        }
+
+ 
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 40px;
+
+            list-style: none;
+
+        }
+
+ 
+
+        .nav-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: color 0.3s ease;
+
+            font-weight: 500;
+
+        }
+
+ 
+
+        .nav-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .nav-lang {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+            border: 1px solid var(--text-muted);
+
+            padding: 5px 12px;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        .nav-lang:hover {
+
+            color: var(--text-light);
+
+            border-color: var(--text-light);
+
+        }
+
+ 
+
+        /* Mobile menu */
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+        .menu-toggle {
+
+            display: none;
+
+            flex-direction: column;
+
+            cursor: pointer;
+
+            gap: 5px;
+
+            padding: 8px;
+
+        }
+
+
+
+        .menu-toggle span {
+
+            width: 25px;
+
+            height: 2px;
+
+            background: var(--text-light);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        /* Hero Section */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            background: var(--ocean-gradient);
+
+            overflow: hidden;
+
+        }
+
+ 
+
+        .hero-video {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            z-index: 1;
+
+            object-fit: cover;
+
+        }
+
+        .hero-bg {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background-image: url('assets/hero-marina-aerial.webp');
+
+            background-size: cover;
+
+            background-position: center;
+
+            opacity: 0.4;
+
+            z-index: 2;
+
+        }
+
+ 
+
+        .hero-overlay {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.7) 0%, rgba(10, 22, 40, 0.5) 50%, rgba(10, 22, 40, 0.9) 100%);
+
+            z-index: 3;
+
+        }
+
+ 
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 10;
+
+            padding: 0 50px;
+
+            max-width: 800px;
+
+        }
+
+ 
+
+        .hero-tagline {
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+            font-weight: 500;
+
+        }
+
+ 
+
+        .hero-title {
+
+            font-size: 72px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+ 
+
+        .hero-title span {
+
+            display: block;
+
+        }
+
+ 
+
+        .hero-divider {
+
+            width: 60px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin-bottom: 30px;
+
+        }
+
+ 
+
+        .hero-description {
+
+            font-size: 16px;
+
+            color: var(--text-muted);
+
+            max-width: 500px;
+
+            line-height: 1.8;
+
+            margin-bottom: 40px;
+
+        }
+
+ 
+
+        .hero-cta {
+
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+        }
+
+ 
+
+        .btn {
+
+            padding: 15px 35px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+
+            border: none;
+
+        }
+
+ 
+
+        .btn-primary {
+
+            background: var(--highlight);
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .btn-primary:hover {
+
+            background: #4a9ed8;
+
+            transform: translateY(-2px);
+
+        }
+
+ 
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--text-light);
+
+            border: 2px solid var(--text-light);
+
+        }
+
+ 
+
+        .btn-outline:hover {
+
+            background: var(--text-light);
+
+            color: var(--primary-dark);
+
+        }
+
+
+
+        /* About Section */
+
+        .section {
+
+            padding: 120px 50px;
+
+        }
+
+ 
+
+        .about-section {
+
+            background: var(--secondary-dark);
+
+            position: relative;
+
+        }
+
+ 
+
+        .section-label {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .section-title {
+
+            font-size: 56px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 40px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+ 
+
+        .section-title span {
+
+            display: block;
+
+        }
+
+ 
+
+        .section-divider {
+
+            width: 60px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin-bottom: 30px;
+
+        }
+
+ 
+
+        .about-content {
+
+            max-width: 700px;
+
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Table Section */
+        .services-table-section {
+            background: var(--primary-dark);
+        }
+
+        .services-table-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-table-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-table {
+            background: var(--secondary-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-table-row {
+            display: grid;
+            grid-template-columns: 60px 200px 1fr 140px;
+            gap: 20px;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .services-table-row:last-child {
+            border-bottom: none;
+        }
+
+        .services-table-row:hover {
+            background: rgba(61, 139, 201, 0.1);
+            padding-left: 40px;
+        }
+
+        .service-table-icon {
+            font-size: 24px;
+            color: var(--highlight);
+            text-align: center;
+        }
+
+        .service-table-name {
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-table-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .service-table-link a {
+            font-size: 12px;
+            color: var(--highlight);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .service-table-link a:hover {
+            color: var(--text-light);
+        }
+
+        .services-table-cta {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 992px) {
+            .services-table-row {
+                grid-template-columns: 50px 1fr;
+                gap: 15px;
+            }
+            .service-table-desc {
+                display: none;
+            }
+            .service-table-link {
+                grid-column: 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .services-table-row {
+                grid-template-columns: 40px 1fr auto;
+                padding: 15px 20px;
+            }
+            .service-table-name {
+                font-size: 13px;
+            }
+            .services-table-cta {
+                flex-direction: column;
+            }
+            .services-table-cta .btn {
+                width: 100%;
+            }
+        }
+
+ 
+
+        .about-text {
+
+            color: var(--text-muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        /* Categories / Services Preview */
+
+        .categories {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 40px;
+
+            padding: 80px 50px;
+
+            background: var(--primary-dark);
+
+            flex-wrap: wrap;
+
+        }
+
+ 
+
+        .category-card {
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: var(--secondary-dark);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            transition: all 0.3s ease;
+
+            width: 220px;
+
+        }
+
+ 
+
+        .category-card:hover {
+
+            border-color: var(--highlight);
+
+            transform: translateY(-5px);
+
+        }
+
+ 
+
+        .category-icon {
+
+            width: 150px;
+
+            height: 150px;
+
+            margin: 0 auto 20px;
+
+            background-size: contain;
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            opacity: 0.9;
+
+        }
+
+ 
+
+        .category-card h3 {
+
+            font-size: 14px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .category-card p {
+
+            font-size: 11px;
+
+            color: var(--text-muted);
+
+            letter-spacing: 1px;
+
+        }
+
+ 
+
+        .category-card a {
+
+            color: var(--text-light);
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        /* Why Luperon Section */
+
+        .why-section {
+
+            background: var(--primary-dark);
+
+            position: relative;
+
+        }
+
+ 
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .why-content h2 {
+
+            font-size: 48px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        .why-text {
+
+            color: var(--text-muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .why-features {
+
+            list-style: none;
+
+            margin-top: 30px;
+
+        }
+
+ 
+
+        .why-features li {
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            font-size: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+ 
+
+        .why-features li::before {
+
+            content: '●';
+
+            color: var(--highlight);
+
+            font-size: 8px;
+
+        }
+
+ 
+
+        .map-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .google-map {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: block;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 22, 40, 0.95), transparent);
+            padding: 30px;
+            display: flex;
+            align-items: flex-end;
+            gap: 15px;
+        }
+
+        .map-marker-pin {
+            width: 20px;
+            height: 20px;
+            background: var(--highlight);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(61, 139, 201, 0.6);
+        }
+
+        .map-label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .map-coords {
+            font-family: monospace;
+            font-size: 14px;
+            color: var(--highlight);
+        }
+
+        .map-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+ 
+
+        /* Value Pillars */
+
+        .pillars {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 0;
+
+            background: var(--secondary-dark);
+
+        }
+
+ 
+
+        .pillar {
+
+            padding: 60px 40px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+            transition: background 0.3s ease;
+
+        }
+
+ 
+
+        .pillar:last-child {
+
+            border-right: none;
+
+        }
+
+ 
+
+        .pillar:hover {
+
+            background: rgba(61, 139, 201, 0.1);
+
+        }
+
+ 
+
+        .pillar-icon {
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+
+            opacity: 0.8;
+
+        }
+
+ 
+
+        .pillar h3 {
+
+            font-size: 16px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .pillar p {
+
+            font-size: 13px;
+
+            color: var(--text-muted);
+
+            line-height: 1.7;
+
+        }
+
+ 
+
+        /* Partners / Brands */
+
+        .partners {
+
+            padding: 60px 50px;
+
+            background: var(--secondary-dark);
+
+            text-align: center;
+
+        }
+
+ 
+
+        .partners-logos {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 60px;
+
+            flex-wrap: wrap;
+
+            opacity: 0.7;
+
+        }
+
+ 
+
+        .partner-logo {
+
+            height: 40px;
+
+            filter: grayscale(100%) brightness(2);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        .partner-logo:hover {
+
+            filter: grayscale(0%) brightness(1);
+
+            opacity: 1;
+
+        }
+
+ 
+
+        /* Fishing Section */
+        .fishing-section {
+            background: var(--primary-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fishing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .fishing-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            order: 1;
+        }
+
+        .fishing-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .fishing-content {
+            order: 2;
+        }
+
+        .fishing-content h2 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .fishing-text {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .fishing-highlights {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .fishing-highlight {
+            text-align: center;
+        }
+
+        .fishing-highlight-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .fishing-highlight h4 {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 992px) {
+            .fishing-grid {
+                grid-template-columns: 1fr;
+            }
+            .fishing-image {
+                order: 2;
+            }
+            .fishing-content {
+                order: 1;
+            }
+        }
+
+        /* Ocean Wave Footer Image */
+
+        .wave-section {
+
+            height: 405px;
+
+            background-image: url('assets/ocean-wave.webp');
+
+            background-size: cover;
+
+            background-position: center;
+
+            position: relative;
+
+        }
+
+ 
+
+        .wave-overlay {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: linear-gradient(180deg, var(--secondary-dark) 0%, transparent 30%, transparent 70%, var(--primary-dark) 100%);
+
+        }
+
+ 
+
+        /* Footer */
+
+        footer {
+
+            background: var(--primary-dark);
+
+            padding: 60px 50px 30px;
+
+        }
+
+ 
+
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding-bottom: 40px;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+ 
+
+        .footer-brand .logo-main {
+
+            font-size: 20px;
+
+        }
+
+ 
+
+        .footer-brand p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-top: 20px;
+
+            line-height: 1.7;
+
+        }
+
+ 
+
+        .footer-links h4 {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .footer-links ul {
+
+            list-style: none;
+
+        }
+
+ 
+
+        .footer-links li {
+
+            margin-bottom: 12px;
+
+        }
+
+ 
+
+        .footer-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: color 0.3s ease;
+
+        }
+
+ 
+
+        .footer-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .footer-contact p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .footer-contact a {
+
+            color: var(--highlight);
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding-top: 30px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .footer-bottom p {
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+
+        }
+
+ 
+
+        .social-links {
+
+            display: flex;
+
+            gap: 20px;
+
+        }
+
+ 
+
+        .social-links a {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            transition: color 0.3s ease;
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .social-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        /* Responsive */
+
+        @media (max-width: 1200px) {
+
+            .hero-title {
+
+                font-size: 56px;
+
+            }
+
+        }
+
+ 
+
+        @media (max-width: 992px) {
+
+            nav {
+
+                padding: 15px 20px;
+
+            }
+
+            .logo-main {
+
+                font-size: 18px;
+
+                padding: 6px 12px;
+
+            }
+
+            .logo-sub {
+
+                font-size: 8px;
+
+                letter-spacing: 3px;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                right: 0;
+
+                background: rgba(10, 22, 40, 0.98);
+
+                flex-direction: column;
+
+                padding: 30px;
+
+                gap: 20px;
+
+            }
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+            .nav-lang {
+
+                font-size: 11px;
+
+                padding: 4px 10px;
+
+            }
+
+            .hero-content {
+
+                padding: 0 30px;
+
+            }
+
+            .hero-title {
+
+                font-size: 42px;
+
+            }
+
+            .section {
+
+                padding: 80px 30px;
+
+            }
+
+            .section-title {
+
+                font-size: 40px;
+
+            }
+
+            .why-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .pillars {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .pillar {
+
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+ 
+
+        @media (max-width: 576px) {
+
+            .hero-title {
+
+                font-size: 32px;
+
+            }
+
+            .section-title {
+
+                font-size: 32px;
+
+            }
+
+            .hero-cta {
+
+                flex-direction: column;
+
+            }
+
+            .btn {
+
+                width: 100%;
+
+                text-align: center;
+
+            }
+
+            .categories {
+
+                padding: 40px 20px;
+
+                gap: 20px;
+
+            }
+
+            .category-card {
+
+                width: 100%;
+
+            }
+
+            .pillars {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+
+            }
+
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes rotateIn {
+            from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+            to { opacity: 1; transform: rotate(0) scale(1); }
+        }
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(61, 139, 201, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(61, 139, 201, 0.6); }
+        }
+        @keyframes borderDraw {
+            from { stroke-dashoffset: 1000; }
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes ripple {
+            0% { transform: scale(0); opacity: 0.5; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-on-scroll.animate-fade-up { transform: translateY(40px); }
+        .animate-on-scroll.animate-fade-left { transform: translateX(-40px); }
+        .animate-on-scroll.animate-fade-right { transform: translateX(40px); }
+        .animate-on-scroll.animate-scale { transform: scale(0.8); }
+        .animate-on-scroll.animate-rotate { transform: rotate(-10deg) scale(0.9); }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1) rotate(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+        .stagger-7 { transition-delay: 0.7s; }
+        .stagger-8 { transition-delay: 0.8s; }
+        /* Hero Animations */
+        .hero-content { animation: fadeInUp 1s ease-out 0.3s both; }
+        .hero-tagline { animation: slideInDown 0.8s ease-out 0.5s both; }
+        .hero-title span:first-child { animation: fadeInLeft 0.8s ease-out 0.7s both; }
+        .hero-title span:last-child { animation: fadeInRight 0.8s ease-out 0.9s both; }
+        .hero-divider { animation: scaleIn 0.6s ease-out 1.1s both; }
+        .hero-description { animation: fadeInUp 0.8s ease-out 1.3s both; }
+        .hero-cta { animation: fadeInUp 0.8s ease-out 1.5s both; }
+        /* Interactive Hover Effects */
+        .category-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .category-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .category-card:hover .category-icon {
+            animation: bounceIn 0.6s ease-out;
+        }
+        .pillar {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .pillar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(61, 139, 201, 0.15), transparent);
+            transition: left 0.6s ease;
+        }
+        .pillar:hover::before { left: 100%; }
+        .pillar:hover { transform: translateY(-5px); }
+        .pillar-icon { transition: all 0.4s ease; }
+        .pillar:hover .pillar-icon { transform: scale(1.3) rotate(5deg); }
+        .why-features li {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .why-features li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.3s ease;
+        }
+        .why-features li:hover {
+            transform: translateX(10px);
+            color: var(--text-light);
+        }
+        .why-features li:hover::after { width: 100%; }
+        /* Button Effects */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .btn:active { transform: scale(0.95); }
+        /* Section Divider Animation */
+        .section-divider, .hero-divider, .page-divider {
+            position: relative;
+            overflow: hidden;
+        }
+        .section-divider::after, .hero-divider::after, .page-divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: shimmer 2s infinite;
+        }
+        /* Logo Hover */
+        .logo-main {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .logo-main:hover {
+            background: var(--text-light);
+            color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        /* Nav Link Underline Animation */
+        .nav-links a {
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        /* Map Marker Pulse */
+        .map-marker {
+            position: relative;
+        }
+        .map-marker::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--highlight);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite, glowPulse 2s infinite;
+        }
+        /* Image Hover Zoom */
+        .why-image img, .about-image img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .why-image:hover img, .about-image:hover img {
+            transform: scale(1.05);
+        }
+        .why-image, .about-image { overflow: hidden; }
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav id="navbar">
+
+        <div class="logo">
+
+            <a href="index.html" class="logo-main">TROPICAL MARINA</a>
+
+            <span class="logo-sub">LUPERÓN BAY</span>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="boatyard.html">Boatyard</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+
+            <div class="nav-lang">EN</div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+ 
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/hero-marina-aerial.webp">
+            <source src="assets/hero-video.mp4" type="video/mp4">
+            <source src="assets/hero-video.webm" type="video/webm">
+        </video>
+
+        <div class="hero-bg"></div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-tagline">Full-Service Marina & Boatyard</p>
+
+            <h1 class="hero-title">
+
+                <span>TROPICAL</span>
+
+                <span>MARINA</span>
+
+            </h1>
+
+            <div class="hero-divider"></div>
+
+            <p class="hero-description">
+
+                Your safe harbor in Luperón Bay. Full-service marina and boatyard located in one of the Caribbean's most protected natural anchorages.
+
+            </p>
+
+            <div class="hero-cta">
+
+                <a href="contact.html" class="btn btn-primary">Request Haul-Out</a>
+
+                <a href="services.html#facilities" class="btn btn-outline">View Facilities</a>
+
+                <a href="services.html#calculator" class="btn btn-outline" style="border-color: var(--highlight); color: var(--highlight);">Price Calculator</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- About Preview Section -->
+
+    <section class="section about-section">
+
+        <div class="about-grid">
+
+            <div class="about-content">
+
+                <p class="section-label">Welcome to Tropical Marina</p>
+
+                <h2 class="section-title">
+
+                    <span>SAFE HARBOR</span>
+
+                    <span>& EXPERT CARE</span>
+
+                </h2>
+
+                <div class="section-divider"></div>
+
+                <p class="about-text">
+
+                    Tropical Marina is located deep inside Luperón Bay, one of the safest hurricane anchorages in the Caribbean. Our marina sits in a protected basin wrapped by mangroves and hills, providing exceptional natural shelter that cruisers have trusted for decades.
+
+                </p>
+
+                <p class="about-text">
+
+                    Just a short walk from the town center of Luperón, our guests enjoy easy access to restaurants, hardware stores, grocery shops, and local services—making Tropical Marina the ideal base for both extended stays and essential boat work.
+
+                </p>
+
+                <a href="about.html" class="btn btn-outline" style="margin-top: 20px;">Learn More</a>
+
+            </div>
+
+            <div class="about-image">
+                <img src="assets/about-marina-aerial.webp" alt="Tropical Marina aerial view">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services Overview Table -->
+    <section class="section services-table-section">
+        <div class="services-table-container">
+            <div class="services-table-header">
+                <p class="section-label">What We Offer</p>
+                <h2 class="section-title">OUR SERVICES AT A GLANCE</h2>
+                <div class="section-divider" style="margin: 0 auto 30px;"></div>
+            </div>
+            <div class="services-table">
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-anchor"></i></div>
+                    <div class="service-table-name">Berthing & Moorings</div>
+                    <div class="service-table-desc">Secure slips in protected waters with water & power hookups</div>
+                    <div class="service-table-link"><a href="services.html#facilities">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-ship"></i></div>
+                    <div class="service-table-name">Haul-Out Services</div>
+                    <div class="service-table-desc">Professional haul-out with heavy-duty equipment up to 65ft</div>
+                    <div class="service-table-link"><a href="boatyard.html">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-wrench"></i></div>
+                    <div class="service-table-name">Boatyard Repairs</div>
+                    <div class="service-table-desc">Hull repairs, fiberglass, bottom painting & maintenance</div>
+                    <div class="service-table-link"><a href="boatyard.html">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="service-table-name">Hurricane Storage</div>
+                    <div class="service-table-desc">Secure land storage with ground tie-downs & 24/7 monitoring</div>
+                    <div class="service-table-link"><a href="boatyard.html#hurricane-storage">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-gas-pump"></i></div>
+                    <div class="service-table-name">Fuel Station</div>
+                    <div class="service-table-desc">Full refueling station with diesel and gasoline on-site</div>
+                    <div class="service-table-link"><a href="services.html">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-tint"></i></div>
+                    <div class="service-table-name">Water & Utilities</div>
+                    <div class="service-table-desc">Fresh water supply and shore power connections</div>
+                    <div class="service-table-link"><a href="services.html#facilities">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-tools"></i></div>
+                    <div class="service-table-name">Parts & Supplies</div>
+                    <div class="service-table-desc">Spare parts sourcing and local vendor coordination</div>
+                    <div class="service-table-link"><a href="services.html">Learn More →</a></div>
+                </div>
+                <div class="services-table-row">
+                    <div class="service-table-icon"><i class="fas fa-user-shield"></i></div>
+                    <div class="service-table-name">24/7 Security</div>
+                    <div class="service-table-desc">Round-the-clock monitoring for your vessel's safety</div>
+                    <div class="service-table-link"><a href="services.html#facilities">Learn More →</a></div>
+                </div>
+            </div>
+            <div class="services-table-cta">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
+                <a href="services.html#calculator" class="btn btn-outline">Price Calculator</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Luperón Section -->
+
+    <section class="section why-section">
+
+        <div class="why-grid">
+
+            <div class="why-content">
+
+                <p class="section-label">Strategic Location</p>
+
+                <h2>WHY LUPERÓN BAY</h2>
+
+                <div class="section-divider"></div>
+
+                <p class="why-text">
+
+                    Luperón Bay has earned its reputation as one of the Caribbean's premier hurricane holes. The deep, enclosed natural harbor is protected on all sides by hills and dense mangrove forests, creating calm waters with minimal surge even during severe weather.
+
+                </p>
+
+                <p class="why-text">
+
+                    For decades, international cruisers have trusted Luperón as their go-to destination for hurricane season storage and essential boat maintenance.
+
+                </p>
+
+                <ul class="why-features">
+
+                    <li>Deep, enclosed natural harbor</li>
+
+                    <li>Protected by surrounding hills and mangroves</li>
+
+                    <li>Minimal surge and wave exposure</li>
+
+                    <li>Trusted by cruisers for 30+ years</li>
+
+                    <li>Walking distance to town amenities</li>
+
+                </ul>
+
+            </div>
+
+            <div class="map-container">
+
+                <!-- Google Maps Embed - Replace YOUR_API_KEY with your actual Google Maps API key -->
+                <iframe
+                    class="google-map"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcKYHLfy5cl3bkEl-dLS8EYYDsyPNb2xo&q=19.89405,-70.95464&zoom=14&maptype=satellite"
+                    width="100%"
+                    height="500"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-overlay">
+                    <div class="map-marker-pin"></div>
+                    <div class="map-label">
+                        <span class="map-coords">19.89405° N, 70.95464° W</span>
+                        <span class="map-title">Tropical Marina</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Value Pillars -->
+
+    <section class="pillars">
+
+        <div class="pillar">
+
+            <div class="pillar-icon"><i class="fas fa-anchor"></i></div>
+
+            <h3>Safe Harbor</h3>
+
+            <p>Protected anchorage in one of the Caribbean's safest natural bays</p>
+
+        </div>
+
+        <div class="pillar">
+
+            <div class="pillar-icon"><i class="fas fa-wrench"></i></div>
+
+            <h3>Expert Service</h3>
+
+            <p>Skilled team providing repairs, maintenance, and haul-out services</p>
+
+        </div>
+
+        <div class="pillar">
+
+            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+
+            <h3>24/7 Security</h3>
+
+            <p>Round-the-clock monitoring for your peace of mind</p>
+
+        </div>
+
+        <div class="pillar">
+
+            <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+
+            <h3>Cruiser Community</h3>
+
+            <p>Welcoming atmosphere trusted by sailors from around the world</p>
+
+        </div>
+
+    </section>
+
+    <!-- Fishing Section -->
+    <section class="section fishing-section">
+        <div class="fishing-grid">
+            <div class="fishing-image">
+                <img src="assets/fishing-luperon.webp" alt="Sport fishing in Luperón Bay">
+            </div>
+            <div class="fishing-content">
+                <p class="section-label">World-Class Fishing</p>
+                <h2>FISH THE NORTH COAST</h2>
+                <div class="section-divider"></div>
+                <p class="fishing-text">
+                    Luperón sits at the gateway to some of the Caribbean's richest fishing grounds. The waters off the Dominican Republic's north coast are home to blue marlin, mahi-mahi, wahoo, and yellowfin tuna—making this an angler's paradise.
+                </p>
+                <p class="fishing-text">
+                    Whether you're heading offshore for big game or fishing the bay for snapper and grouper, Tropical Marina is your ideal home base with easy access to open water.
+                </p>
+                <div class="fishing-highlights">
+                    <div class="fishing-highlight">
+                        <div class="fishing-highlight-icon"><i class="fas fa-fish"></i></div>
+                        <h4>Blue Marlin</h4>
+                    </div>
+                    <div class="fishing-highlight">
+                        <div class="fishing-highlight-icon"><i class="fas fa-fish"></i></div>
+                        <h4>Mahi-Mahi</h4>
+                    </div>
+                    <div class="fishing-highlight">
+                        <div class="fishing-highlight-icon"><i class="fas fa-fish"></i></div>
+                        <h4>Wahoo</h4>
+                    </div>
+                    <div class="fishing-highlight">
+                        <div class="fishing-highlight-icon"><i class="fas fa-fish"></i></div>
+                        <h4>Yellowfin Tuna</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Ocean Wave Image -->
+
+    <section class="wave-section">
+
+        <div class="wave-overlay"></div>
+
+    </section>
+
+ 
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-main">TROPICAL MARINA</span>
+
+                    <span class="logo-sub">LUPERÓN BAY</span>
+
+                </div>
+
+                <p>Full-service marina and boatyard located in Luperón Bay, Dominican Republic—one of the Caribbean's safest hurricane anchorages.</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Navigation</h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+
+                    <li><a href="boatyard.html">Boatyard</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>More</h4>
+
+                <ul>
+
+                    <li><a href="services.html#facilities">Facilities</a></li>
+
+                    <li><a href="boatyard.html#hurricane-storage">Hurricane Storage</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links footer-contact">
+
+                <h4>Contact Us</h4>
+
+                <p>Luperón, Puerto Plata<br>Dominican Republic</p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18099947231">+1 809 994-7231</a></p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18295892126">+1 829 589-2126</a></p>
+
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sd84alvarez@gmail.com">sd84alvarez@gmail.com</a></p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2024 Tropical Marina. All rights reserved.</p>
+
+            <div class="social-links">
+
+                <a href="#" title="Facebook">Facebook</a>
+
+                <a href="#" title="YouTube">YouTube</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+ 
+
+    <script>
+
+        // Navbar scroll effect
+
+        window.addEventListener('scroll', function() {
+
+            const nav = document.getElementById('navbar');
+
+            if (window.scrollY > 50) {
+
+                nav.classList.add('scrolled');
+
+            } else {
+
+                nav.classList.remove('scrolled');
+
+            }
+
+        });
+
+ 
+
+        // Mobile menu toggle
+
+        function toggleMenu() {
+
+            const navLinks = document.getElementById('navLinks');
+
+            navLinks.classList.toggle('active');
+
+        }
+
+        // Scroll Animation Observer
+        const animateOnScroll = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        };
+
+        // Add animation classes to elements
+        const addAnimationClasses = () => {
+            // Section titles and labels
+            document.querySelectorAll('.section-label').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up');
+            });
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up');
+            });
+            document.querySelectorAll('.section-divider').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-scale');
+            });
+
+            // Category cards with stagger
+            document.querySelectorAll('.category-card').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 4) + 1}`);
+            });
+
+            // Pillars with stagger
+            document.querySelectorAll('.pillar').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 4) + 1}`);
+            });
+
+            // Why features list items
+            document.querySelectorAll('.why-features li').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-left', `stagger-${i + 1}`);
+            });
+
+            // Images
+            document.querySelectorAll('.why-image, .about-image, .fishing-image').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-right');
+            });
+
+            // Fishing highlights with stagger
+            document.querySelectorAll('.fishing-highlight').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 4) + 1}`);
+            });
+
+            // Content blocks
+            document.querySelectorAll('.why-content, .about-text').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-left');
+            });
+
+            // Services table rows with stagger
+            document.querySelectorAll('.services-table-row').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 8) + 1}`);
+            });
+
+            // Services table container
+            document.querySelectorAll('.services-table').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up');
+            });
+
+            // CTA sections
+            document.querySelectorAll('.cta-section h2, .cta-section p').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${i + 1}`);
+            });
+
+            // Footer sections
+            document.querySelectorAll('.footer-brand, .footer-links').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${i + 1}`);
+            });
+        };
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number, .spec-value');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const text = target.innerText;
+                        const numMatch = text.match(/[\d.]+/);
+                        if (numMatch) {
+                            const num = parseFloat(numMatch[0]);
+                            const suffix = text.replace(numMatch[0], '');
+                            let current = 0;
+                            const increment = num / 50;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= num) {
+                                    current = num;
+                                    clearInterval(timer);
+                                }
+                                target.innerText = (Number.isInteger(num) ? Math.floor(current) : current.toFixed(1)) + suffix;
+                            }, 30);
+                        }
+                        observer.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        };
+
+        // Parallax effect disabled for video to prevent scroll glitches
+        const parallaxEffect = () => {
+            // Intentionally empty - video parallax removed for smoother scrolling
+        };
+
+        // Mobile video autoplay handler
+        const initMobileVideo = () => {
+            const video = document.querySelector('.hero-video');
+            if (video) {
+                // Attempt to play video
+                const playVideo = () => {
+                    video.play().catch(e => {
+                        console.log('Video autoplay prevented:', e);
+                    });
+                };
+
+                // Try to play immediately
+                playVideo();
+
+                // Also try on user interaction for iOS
+                ['touchstart', 'touchend', 'click', 'scroll'].forEach(event => {
+                    document.addEventListener(event, function playOnInteraction() {
+                        playVideo();
+                        document.removeEventListener(event, playOnInteraction);
+                    }, { once: true, passive: true });
+                });
+
+                // Ensure video plays when visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            playVideo();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(video);
+            }
+        };
+
+        // Initialize all animations
+        document.addEventListener('DOMContentLoaded', () => {
+            addAnimationClasses();
+            animateOnScroll();
+            animateCounters();
+            parallaxEffect();
+            initMobileVideo();
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+ 

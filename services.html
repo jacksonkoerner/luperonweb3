@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Tropical Marina - Full-Service Marina & Boatyard in Luperón</title>
+
+    <meta name="description" content="Complete marina and boatyard services at Tropical Marina: berthing, haul-out, hull repairs, fiberglass work, bottom painting, hurricane storage, and more in Luperón Bay, DR.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+ 
+
+        :root {
+
+            --primary-dark: #0a1628;
+
+            --secondary-dark: #132337;
+
+            --accent-blue: #1a3a5c;
+
+            --highlight: #3d8bc9;
+
+            --text-light: #ffffff;
+
+            --text-muted: #a8b5c4;
+
+            --ocean-gradient: linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #2d5a7b 100%);
+
+        }
+
+ 
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+ 
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: var(--primary-dark);
+
+            color: var(--text-light);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+ 
+
+        /* Navigation */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            z-index: 1000;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(10, 22, 40, 0.98);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+ 
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+        }
+
+ 
+
+        .logo-main {
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            color: var(--text-light);
+
+            text-decoration: none;
+
+            border: 2px solid var(--text-light);
+
+            padding: 8px 16px;
+
+        }
+
+ 
+
+        .logo-sub {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: var(--text-muted);
+
+            margin-top: 4px;
+
+        }
+
+ 
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 40px;
+
+            list-style: none;
+
+        }
+
+ 
+
+        .nav-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: color 0.3s ease;
+
+            font-weight: 500;
+
+        }
+
+ 
+
+        .nav-links a:hover,
+
+        .nav-links a.active {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .nav-lang {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+            border: 1px solid var(--text-muted);
+
+            padding: 5px 12px;
+
+            cursor: pointer;
+
+        }
+
+ 
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+        .menu-toggle {
+
+            display: none;
+
+            flex-direction: column;
+
+            cursor: pointer;
+
+            gap: 5px;
+
+            padding: 8px;
+
+        }
+
+
+
+        .menu-toggle span {
+
+            width: 25px;
+
+            height: 2px;
+
+            background: var(--text-light);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        /* Page Header */
+
+        .page-header {
+
+            padding: 180px 50px 100px;
+
+            background: var(--ocean-gradient);
+
+            position: relative;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .page-header-bg {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background-image: url('assets/services-header-yard.webp');
+
+            background-size: cover;
+
+            background-position: center;
+
+            opacity: 0.3;
+
+        }
+
+ 
+
+        .page-header-overlay {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.52) 0%, rgba(10, 22, 40, 0.39) 50%, rgba(10, 22, 40, 0.585) 100%);
+
+        }
+
+ 
+
+        .page-header-content {
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+ 
+
+        .page-label {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .page-title {
+
+            font-size: 64px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .page-subtitle {
+
+            max-width: 600px;
+
+            margin: 30px auto 0;
+
+            color: var(--text-muted);
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+        }
+
+ 
+
+        .page-divider {
+
+            width: 80px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        /* Section Styles */
+
+        .section {
+
+            padding: 100px 50px;
+
+        }
+
+ 
+
+        .section-label {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .section-title {
+
+            font-size: 42px;
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        .section-divider {
+
+            width: 60px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin-bottom: 30px;
+
+        }
+
+ 
+
+        /* Services Overview */
+
+        .services-overview {
+
+            background: var(--secondary-dark);
+
+        }
+
+ 
+
+        .services-intro {
+
+            max-width: 800px;
+
+            margin: 0 auto 60px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .services-intro p {
+
+            color: var(--text-muted);
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+        }
+
+ 
+
+        /* Service Categories Grid */
+
+        .service-categories {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .service-category {
+
+            background: var(--primary-dark);
+
+            padding: 50px 40px;
+
+            border-left: 4px solid var(--highlight);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        .service-category:hover {
+
+            background: rgba(61, 139, 201, 0.1);
+
+            transform: translateX(10px);
+
+        }
+
+ 
+
+        .category-icon {
+
+            font-size: 48px;
+
+            margin-bottom: 25px;
+
+        }
+
+ 
+
+        .service-category h3 {
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 15px;
+
+        }
+
+ 
+
+        .service-category p {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .service-category a {
+
+            color: var(--highlight);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .service-category a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        /* Detailed Services Section */
+
+        .detailed-services {
+
+            background: var(--primary-dark);
+
+        }
+
+ 
+
+        .services-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .service-block {
+
+            padding: 40px;
+
+            background: var(--secondary-dark);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+ 
+
+        .service-block h3 {
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 25px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 2px solid var(--highlight);
+
+        }
+
+ 
+
+        .service-list {
+
+            list-style: none;
+
+        }
+
+ 
+
+        .service-list li {
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+            font-size: 14px;
+
+            color: var(--text-muted);
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 12px;
+
+        }
+
+ 
+
+        .service-list li:last-child {
+
+            border-bottom: none;
+
+        }
+
+ 
+
+        .service-list li::before {
+
+            content: '✓';
+
+            color: var(--highlight);
+
+            font-weight: bold;
+
+            flex-shrink: 0;
+
+        }
+
+ 
+
+        /* Highlighted Services */
+
+        .highlighted-services {
+
+            background: var(--secondary-dark);
+
+        }
+
+ 
+
+        .highlight-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 0;
+
+            max-width: 1400px;
+
+            margin: 60px auto 0;
+
+        }
+
+ 
+
+        .highlight-card {
+
+            padding: 50px 30px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+            transition: background 0.3s ease;
+
+        }
+
+ 
+
+        .highlight-card:last-child {
+
+            border-right: none;
+
+        }
+
+ 
+
+        .highlight-card:hover {
+
+            background: rgba(61, 139, 201, 0.1);
+
+        }
+
+ 
+
+        .highlight-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .highlight-card h4 {
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .highlight-card p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            line-height: 1.6;
+
+        }
+
+ 
+
+        /* Image Break Section */
+
+        .image-break {
+
+            height: 600px;
+
+            background-image: url('assets/services-yard-panorama.webp');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            position: relative;
+
+        }
+
+ 
+
+        .image-break-overlay {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: linear-gradient(180deg, var(--primary-dark) 0%, rgba(10, 22, 40, 0.3) 50%, var(--secondary-dark) 100%);
+
+        }
+
+ 
+
+        /* Additional Services */
+
+        .additional-services {
+
+            background: var(--primary-dark);
+
+        }
+
+ 
+
+        .additional-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+            max-width: 1200px;
+
+            margin: 60px auto 0;
+
+        }
+
+ 
+
+        .additional-card {
+
+            padding: 30px;
+
+            background: var(--secondary-dark);
+
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            text-align: center;
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        .additional-card:hover {
+
+            border-color: var(--highlight);
+
+            transform: translateY(-5px);
+
+        }
+
+ 
+
+        .additional-card h4 {
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .additional-card p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+        }
+
+ 
+
+        /* CTA Section */
+
+        .cta-section {
+
+            padding: 100px 50px;
+
+            background: var(--accent-blue);
+
+            text-align: center;
+
+        }
+
+ 
+
+        .cta-section h2 {
+
+            font-size: 36px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        .cta-section p {
+
+            color: var(--text-muted);
+
+            font-size: 16px;
+
+            max-width: 600px;
+
+            margin: 0 auto 40px;
+
+        }
+
+ 
+
+        .btn {
+
+            padding: 15px 35px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            display: inline-block;
+
+        }
+
+ 
+
+        .btn-primary {
+
+            background: var(--highlight);
+
+            color: var(--text-light);
+
+            margin-right: 15px;
+
+        }
+
+ 
+
+        .btn-primary:hover {
+
+            background: #4a9ed8;
+
+            transform: translateY(-2px);
+
+        }
+
+ 
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--text-light);
+
+            border: 2px solid var(--text-light);
+
+        }
+
+ 
+
+        .btn-outline:hover {
+
+            background: var(--text-light);
+
+            color: var(--primary-dark);
+
+        }
+
+ 
+
+        /* Footer */
+
+        footer {
+
+            background: var(--primary-dark);
+
+            padding: 60px 50px 30px;
+
+        }
+
+ 
+
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding-bottom: 40px;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+ 
+
+        .footer-brand .logo-main {
+
+            font-size: 20px;
+
+        }
+
+ 
+
+        .footer-brand p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-top: 20px;
+
+            line-height: 1.7;
+
+        }
+
+ 
+
+        .footer-links h4 {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .footer-links ul {
+
+            list-style: none;
+
+        }
+
+ 
+
+        .footer-links li {
+
+            margin-bottom: 12px;
+
+        }
+
+ 
+
+        .footer-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: color 0.3s ease;
+
+        }
+
+ 
+
+        .footer-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .footer-contact p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .footer-contact a {
+
+            color: var(--highlight);
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding-top: 30px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .footer-bottom p {
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+
+        }
+
+ 
+
+        .social-links {
+
+            display: flex;
+
+            gap: 20px;
+
+        }
+
+ 
+
+        .social-links a {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .social-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        /* Responsive */
+
+        @media (max-width: 1200px) {
+
+            .highlight-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .highlight-card {
+
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            }
+
+        }
+
+ 
+
+        @media (max-width: 992px) {
+
+            nav {
+
+                padding: 15px 20px;
+
+            }
+
+            .logo-main {
+
+                font-size: 18px;
+
+                padding: 6px 12px;
+
+            }
+
+            .logo-sub {
+
+                font-size: 8px;
+
+                letter-spacing: 3px;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                right: 0;
+
+                background: rgba(10, 22, 40, 0.98);
+
+                flex-direction: column;
+
+                padding: 30px;
+
+                gap: 20px;
+
+            }
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+            .nav-lang {
+
+                font-size: 11px;
+
+                padding: 4px 10px;
+
+            }
+
+            .page-header {
+
+                padding: 140px 30px 80px;
+
+            }
+
+            .page-title {
+
+                font-size: 42px;
+
+            }
+
+            .section {
+
+                padding: 80px 30px;
+
+            }
+
+            .section-title {
+
+                font-size: 32px;
+
+            }
+
+            .service-categories {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .additional-grid {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+ 
+
+        @media (max-width: 576px) {
+
+            .page-title {
+
+                font-size: 32px;
+
+            }
+
+            .highlight-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .additional-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+
+            }
+
+            .cta-section .btn {
+
+                display: block;
+
+                margin: 10px auto;
+
+            }
+
+        }
+
+        /* ===== PRICE CALCULATOR ===== */
+        .calculator-section {
+            background: var(--secondary-dark);
+            padding: 100px 50px;
+        }
+        .calculator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .calculator-box {
+            background: var(--primary-dark);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .calc-input-group {
+            margin-bottom: 30px;
+        }
+        .calc-input-group label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+        .calc-slider-container {
+            position: relative;
+        }
+        .calc-slider {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--accent-blue);
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        .calc-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--highlight);
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(61, 139, 201, 0.5);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .calc-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 20px rgba(61, 139, 201, 0.7);
+        }
+        .calc-slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--highlight);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(61, 139, 201, 0.5);
+        }
+        .slider-value {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .slider-value .current-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--highlight);
+        }
+        .slider-value .range-label {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        .calc-select {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--secondary-dark);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            -webkit-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a8b5c4' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            padding-right: 45px;
+        }
+        .calc-select:focus {
+            outline: none;
+            border-color: var(--highlight);
+        }
+        .calc-select option {
+            background: var(--primary-dark);
+            color: var(--text-light);
+        }
+        .calc-results {
+            background: linear-gradient(135deg, var(--accent-blue) 0%, var(--highlight) 100%);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+        }
+        .result-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .result-price {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        .result-breakdown {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        .result-note {
+            font-size: 12px;
+            opacity: 0.7;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .duration-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .duration-badge {
+            padding: 10px 20px;
+            background: var(--secondary-dark);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .duration-badge:hover {
+            border-color: var(--highlight);
+        }
+        .duration-badge.active {
+            background: var(--highlight);
+            color: var(--text-light);
+        }
+        .calc-disclaimer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+        /* Input Mode Toggle */
+        .input-mode-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .toggle-dots {
+            display: flex;
+            gap: 8px;
+        }
+        .toggle-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .toggle-dot.active {
+            background: var(--highlight);
+            box-shadow: 0 0 10px rgba(61, 139, 201, 0.5);
+        }
+        .toggle-dot:hover {
+            background: var(--highlight);
+        }
+        .toggle-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+        .toggle-label.active {
+            color: var(--text-light);
+        }
+        /* Manual Input Fields */
+        .calc-manual-input {
+            display: none;
+        }
+        .calc-manual-input.active {
+            display: block;
+        }
+        .calc-slider-input {
+            display: block;
+        }
+        .calc-slider-input.hidden {
+            display: none;
+        }
+        .manual-input-field {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--secondary-dark);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .manual-input-field:focus {
+            outline: none;
+            border-color: var(--highlight);
+        }
+        .manual-input-field::placeholder {
+            color: var(--text-muted);
+        }
+        .input-suffix {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .input-suffix span {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .animate-on-scroll.animate-fade-up { transform: translateY(40px); }
+        .animate-on-scroll.animate-fade-left { transform: translateX(-40px); }
+        .animate-on-scroll.animate-fade-right { transform: translateX(40px); }
+        .animate-on-scroll.animate-scale { transform: scale(0.8); }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+        /* Header Animations */
+        .page-header-content { animation: fadeInUp 1s ease-out 0.3s both; }
+        .page-title { animation: scaleIn 0.8s ease-out 0.5s both; }
+        .page-divider { animation: scaleIn 0.6s ease-out 0.7s both; }
+        .page-subtitle { animation: fadeInUp 0.8s ease-out 0.9s both; }
+        /* Interactive Hover Effects */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        .service-card:hover .service-icon {
+            animation: bounceIn 0.6s ease-out;
+        }
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .btn:active { transform: scale(0.95); }
+        .logo-main {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .logo-main:hover {
+            background: var(--text-light);
+            color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+        .nav-links a {
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--highlight);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .boat-type {
+            transition: all 0.4s ease;
+        }
+        .boat-type:hover {
+            transform: translateY(-5px);
+            background: var(--accent-blue);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        @media (max-width: 992px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            .calculator-box {
+                padding: 30px;
+            }
+            .result-price {
+                font-size: 42px;
+            }
+        }
+
+        /* ===== FACILITIES SECTION STYLES ===== */
+        .facilities-divider {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--highlight), #2ecc71);
+            margin: 0;
+        }
+
+        .facilities-header {
+            background: linear-gradient(135deg, var(--highlight) 0%, #2980b9 100%);
+            padding: 60px 50px;
+            text-align: center;
+        }
+
+        .facilities-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .facilities-header p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Berthing Section */
+        .berthing-section {
+            background: var(--secondary-dark);
+        }
+
+        .berthing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .berthing-content p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .berthing-specs {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .berthing-spec {
+            background: var(--primary-dark);
+            padding: 25px 30px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            border-top: 3px solid var(--highlight);
+        }
+
+        .berthing-spec-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--highlight);
+            margin-bottom: 5px;
+        }
+
+        .berthing-spec-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        .berthing-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Marina Facilities Grid */
+        .marina-facilities {
+            background: var(--primary-dark);
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .facility-card {
+            background: var(--secondary-dark);
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover {
+            border-color: var(--highlight);
+            transform: translateY(-5px);
+        }
+
+        .facility-icon {
+            font-size: 42px;
+            color: var(--highlight);
+            margin-bottom: 20px;
+        }
+
+        .facility-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .facility-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Feature Highlights */
+        .feature-highlights {
+            background: var(--accent-blue);
+            padding: 80px 50px;
+        }
+
+        .feature-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .feature-highlight-item {
+            padding: 30px;
+        }
+
+        .feature-highlight-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-highlight-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .feature-highlight-item p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Detailed Amenities */
+        .amenities-section {
+            background: var(--secondary-dark);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .amenity-block {
+            background: var(--primary-dark);
+            padding: 40px;
+            border-left: 4px solid var(--highlight);
+        }
+
+        .amenity-block h3 {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .amenity-list {
+            list-style: none;
+        }
+
+        .amenity-list li {
+            padding: 10px 0;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .amenity-list li::before {
+            content: '✓';
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        /* Town Section */
+        .town-section {
+            background: var(--primary-dark);
+        }
+
+        .town-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .town-content p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .town-amenities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .town-amenity {
+            background: var(--secondary-dark);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .town-amenity:hover {
+            border-color: var(--highlight);
+        }
+
+        .town-amenity-icon {
+            font-size: 24px;
+            color: var(--highlight);
+            margin-bottom: 10px;
+        }
+
+        .town-amenity span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .town-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: var(--secondary-dark);
+        }
+
+        .location-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .location-card {
+            background: var(--primary-dark);
+            padding: 40px;
+            border-top: 4px solid var(--highlight);
+        }
+
+        .location-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .location-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .location-detail:last-child {
+            border-bottom: none;
+        }
+
+        .location-detail i {
+            color: var(--highlight);
+            width: 20px;
+            text-align: center;
+        }
+
+        .location-detail span {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .location-detail strong {
+            color: var(--text-light);
+        }
+
+        /* Facilities Responsive */
+        @media (max-width: 1200px) {
+            .feature-highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .berthing-grid,
+            .town-grid {
+                grid-template-columns: 1fr;
+            }
+            .facilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+            .location-cards {
+                grid-template-columns: 1fr;
+            }
+            .facilities-header h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .facilities-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            .town-amenities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .berthing-specs {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="index.html" class="logo-main">TROPICAL MARINA</a>
+
+            <span class="logo-sub">LUPERÓN BAY</span>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="services.html" class="active">Services</a></li>
+
+            <li><a href="boatyard.html">Boatyard</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+
+            <div class="nav-lang">EN</div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+ 
+
+    <!-- Page Header -->
+
+    <header class="page-header">
+
+        <div class="page-header-bg"></div>
+
+        <div class="page-header-overlay"></div>
+
+        <div class="page-header-content">
+
+            <p class="page-label">What We Offer</p>
+
+            <h1 class="page-title">Our Services</h1>
+
+            <div class="page-divider"></div>
+
+            <p class="page-subtitle">
+
+                Complete marina and boatyard services for cruising sailors—from secure berthing to expert hull repairs, all in the protected waters of Luperón Bay.
+
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- Price Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <p class="section-label">Estimate Your Costs</p>
+                <h2 class="section-title">PRICE CALCULATOR</h2>
+                <div class="section-divider" style="margin: 0 auto 20px;"></div>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    Use our interactive calculator to estimate marina fees based on your vessel size and stay duration.
+                </p>
+            </div>
+
+            <div class="calculator-box">
+                <!-- Input Mode Toggle -->
+                <div class="input-mode-toggle">
+                    <span class="toggle-label active" id="sliderLabel">Sliders</span>
+                    <div class="toggle-dots">
+                        <div class="toggle-dot active" id="dotSlider" onclick="setInputMode('slider')"></div>
+                        <div class="toggle-dot" id="dotManual" onclick="setInputMode('manual')"></div>
+                    </div>
+                    <span class="toggle-label" id="manualLabel">Manual Input</span>
+                </div>
+
+                <div class="calculator-grid">
+                    <div class="calc-inputs">
+                        <!-- Slider Inputs -->
+                        <div class="calc-slider-input" id="sliderInputs">
+                            <div class="calc-input-group">
+                                <label>Boat Length Overall (LOA)</label>
+                                <div class="calc-slider-container">
+                                    <input type="range" class="calc-slider" id="boatLength" min="20" max="65" value="35">
+                                    <div class="slider-value">
+                                        <span class="current-value" id="lengthValue">35 ft</span>
+                                        <span class="range-label">20 - 65 ft</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label>Boat Beam Width</label>
+                                <div class="calc-slider-container">
+                                    <input type="range" class="calc-slider" id="boatBeam" min="8" max="20" value="12">
+                                    <div class="slider-value">
+                                        <span class="current-value" id="beamValue">12 ft</span>
+                                        <span class="range-label">8 - 20 ft</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label>Stay Duration</label>
+                                <div class="calc-slider-container">
+                                    <input type="range" class="calc-slider" id="stayDuration" min="1" max="365" value="30">
+                                    <div class="slider-value">
+                                        <span class="current-value" id="durationValue">30 days</span>
+                                        <span class="range-label">1 - 365 days</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Manual Inputs -->
+                        <div class="calc-manual-input" id="manualInputs">
+                            <div class="calc-input-group">
+                                <label>Boat Length Overall (LOA)</label>
+                                <div class="input-suffix">
+                                    <input type="number" class="manual-input-field" id="manualLength" min="20" max="65" value="35" placeholder="Enter length">
+                                    <span>feet</span>
+                                </div>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label>Boat Beam Width</label>
+                                <div class="input-suffix">
+                                    <input type="number" class="manual-input-field" id="manualBeam" min="8" max="20" value="12" placeholder="Enter beam">
+                                    <span>feet</span>
+                                </div>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label>Stay Duration</label>
+                                <div class="input-suffix">
+                                    <input type="number" class="manual-input-field" id="manualDuration" min="1" max="365" value="30" placeholder="Enter days">
+                                    <span>days</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Service Type</label>
+                            <select class="calc-select" id="serviceType">
+                                <option value="wetslip">Wet Slip Rental</option>
+                                <option value="dryrack">Dry Rack Storage</option>
+                                <option value="hurricane">Hurricane Storage (Land)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Boat Type</label>
+                            <select class="calc-select" id="boatType">
+                                <option value="sailboat">Sailboat</option>
+                                <option value="powerboat">Powerboat</option>
+                                <option value="catamaran">Catamaran</option>
+                                <option value="trawler">Trawler</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <div class="result-label">Estimated Total</div>
+                        <div class="result-price" id="totalPrice">$1,050</div>
+                        <div class="result-breakdown" id="priceBreakdown">
+                            35 ft × $1.00/ft/day × 30 days
+                        </div>
+                        <div class="result-note">
+                            <strong>Rate Applied:</strong> <span id="rateApplied">Monthly Rate</span><br>
+                            Prices are estimates. Contact us for exact quotes.
+                        </div>
+                    </div>
+                </div>
+
+                <p class="calc-disclaimer">
+                    * Estimates based on standard pricing. Actual rates may vary based on vessel specifications and seasonal availability.
+                    18% ITBIS (tax) not included. Contact us for a personalized quote.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Service Categories Overview -->
+
+    <section class="section services-overview">
+
+        <div class="services-intro">
+
+            <p class="section-label">Full-Service Marina</p>
+
+            <h2 class="section-title">EVERYTHING YOUR BOAT NEEDS</h2>
+
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+
+            <p>
+
+                Whether you're stopping for routine maintenance, preparing for hurricane season, or need major repairs, Tropical Marina has the facilities, expertise, and equipment to get the job done right.
+
+            </p>
+
+        </div>
+
+        <div class="service-categories">
+
+            <div class="service-category">
+
+                <div class="category-icon"><i class="fas fa-anchor"></i></div>
+
+                <h3>Marina Services</h3>
+
+                <p>Secure berthing with water, power, and full amenities in one of the Caribbean's most protected bays.</p>
+
+                <a href="#facilities">View Facilities →</a>
+
+            </div>
+
+            <div class="service-category">
+
+                <div class="category-icon"><i class="fas fa-wrench"></i></div>
+
+                <h3>Boatyard & Repairs</h3>
+
+                <p>Professional haul-out, storage, and repair services with experienced crew and quality materials.</p>
+
+                <a href="boatyard.html">Learn More →</a>
+
+            </div>
+
+            <div class="service-category">
+
+                <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+
+                <h3>Hurricane Storage</h3>
+
+                <p>Secure land storage with ground tie-downs and monitoring during hurricane season.</p>
+
+                <a href="boatyard.html#hurricane-storage">Learn More →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Detailed Services -->
+
+    <section class="section detailed-services">
+
+        <p class="section-label">Complete Service List</p>
+
+        <h2 class="section-title">MARINA & BOATYARD SERVICES</h2>
+
+        <div class="section-divider"></div>
+
+ 
+
+        <div class="services-grid">
+
+            <div class="service-block">
+
+                <h3>Storage Options</h3>
+
+                <ul class="service-list">
+
+                    <li>Short-term storage on the water</li>
+
+                    <li>Long-term storage on the water</li>
+
+                    <li>Short-term storage on the hard</li>
+
+                    <li>Long-term storage on the hard</li>
+
+                    <li>Hurricane-season land storage with secure ground tie-downs</li>
+
+                </ul>
+
+            </div>
+
+            <div class="service-block">
+
+                <h3>Hull & Structural Repairs</h3>
+
+                <ul class="service-list">
+
+                    <li>Fiberglass repairs</li>
+
+                    <li>Aluminum hull repairs</li>
+
+                    <li>Steel hull repairs</li>
+
+                    <li>Structural modifications and reinforcement</li>
+
+                    <li>Keel and rudder work</li>
+
+                </ul>
+
+            </div>
+
+            <div class="service-block">
+
+                <h3>Surface Work</h3>
+
+                <ul class="service-list">
+
+                    <li>Hull polishing and waxing</li>
+
+                    <li>Hull sanding and fairing</li>
+
+                    <li>Bottom sanding and preparation</li>
+
+                    <li>Bottom painting (antifouling)</li>
+
+                    <li>High-pressure washing</li>
+
+                </ul>
+
+            </div>
+
+            <div class="service-block">
+
+                <h3>Additional Services</h3>
+
+                <ul class="service-list">
+
+                    <li>Water supply</li>
+
+                    <li>Full refueling station - Diesel & Gasoline</li>
+
+                    <li>Purchase and supply of spare parts</li>
+
+                    <li>Vendor and mechanic access coordination</li>
+
+                    <li>24-hour security monitoring</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Highlighted Services -->
+
+    <section class="section highlighted-services">
+
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+
+            <p class="section-label">Why Choose Us</p>
+
+            <h2 class="section-title">SERVICE HIGHLIGHTS</h2>
+
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+
+        </div>
+
+        <div class="highlight-grid">
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon"><i class="fas fa-truck-pickup"></i></div>
+
+                <h4>Expert Haul-Out</h4>
+
+                <p>Heavy-duty tractor and marine trailer operated by experienced crew</p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon"><i class="fas fa-gas-pump"></i></div>
+
+                <h4>Fuel Station</h4>
+
+                <p>Full refueling station with diesel and gasoline available on-site</p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
+
+                <h4>24/7 Security</h4>
+
+                <p>Round-the-clock monitoring for your vessel's safety</p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon"><i class="fas fa-cogs"></i></div>
+
+                <h4>Parts & Supplies</h4>
+
+                <p>Access to spare parts and coordination with local vendors</p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <div class="highlight-icon"><i class="fas fa-water"></i></div>
+
+                <h4>Protected Location</h4>
+
+                <p>Work done in one of the Caribbean's safest harbors</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Image Break -->
+
+    <section class="image-break">
+
+        <div class="image-break-overlay"></div>
+
+    </section>
+
+ 
+
+    <!-- Additional Services -->
+
+    <section class="section additional-services">
+
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+
+            <p class="section-label">Boat Types We Service</p>
+
+            <h2 class="section-title">ALL VESSELS WELCOME</h2>
+
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+
+            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.9;">
+
+                Our facilities and crew are equipped to handle a wide variety of vessels, from cruising sailboats to motor yachts and catamarans.
+
+            </p>
+
+        </div>
+
+        <div class="additional-grid">
+
+            <div class="additional-card">
+
+                <h4>Monohull Sailboats</h4>
+
+                <p>All sizes up to 65 feet</p>
+
+            </div>
+
+            <div class="additional-card">
+
+                <h4>Catamarans</h4>
+
+                <p>Cruising and charter cats</p>
+
+            </div>
+
+            <div class="additional-card">
+
+                <h4>Motor Yachts</h4>
+
+                <p>Power boats of all types</p>
+
+            </div>
+
+            <div class="additional-card">
+
+                <h4>Trawlers</h4>
+
+                <p>Long-range cruisers</p>
+
+            </div>
+
+            <div class="additional-card">
+
+                <h4>Sport Fishing</h4>
+
+                <p>Local and offshore boats</p>
+
+            </div>
+
+            <div class="additional-card">
+
+                <h4>Work Boats</h4>
+
+                <p>Commercial vessels</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Facilities Divider -->
+    <div class="facilities-divider" id="facilities"></div>
+
+    <!-- Facilities Header -->
+    <section class="facilities-header">
+        <h2><i class="fas fa-anchor"></i> Marina Facilities</h2>
+        <p>Everything you need for a comfortable stay in Luperón Bay—from secure berthing and shore power to hot showers and easy access to town.</p>
+    </section>
+
+    <!-- Berthing & Moorings -->
+    <section class="section berthing-section">
+        <div class="berthing-grid">
+            <div class="berthing-content">
+                <p class="section-label">On the Water</p>
+                <h2 class="section-title">BERTHING & MOORINGS</h2>
+                <div class="section-divider"></div>
+                <p>Tropical Marina offers secure berths in one of the Caribbean's most protected waters. Our docks accommodate vessels of various sizes, with convenient access to shore facilities and services.</p>
+                <p>Whether you're stopping for a few days or settling in for an extended stay, you'll find our marina provides the perfect balance of security, convenience, and community.</p>
+                <div class="berthing-specs">
+                    <div class="berthing-spec">
+                        <div class="berthing-spec-value">65 ft</div>
+                        <div class="berthing-spec-label">Max Length</div>
+                    </div>
+                    <div class="berthing-spec">
+                        <div class="berthing-spec-value">110V</div>
+                        <div class="berthing-spec-label">Shore Power</div>
+                    </div>
+                    <div class="berthing-spec">
+                        <div class="berthing-spec-value">Fresh</div>
+                        <div class="berthing-spec-label">Water</div>
+                    </div>
+                    <div class="berthing-spec">
+                        <div class="berthing-spec-value">24/7</div>
+                        <div class="berthing-spec-label">Security</div>
+                    </div>
+                </div>
+            </div>
+            <div class="berthing-image">
+                <img src="assets/marina-berths.webp" alt="Marina berths at Tropical Marina">
+            </div>
+        </div>
+    </section>
+
+    <!-- Marina Facilities Grid -->
+    <section class="section marina-facilities">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">What's Available</p>
+            <h2 class="section-title">MARINA AMENITIES</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+        </div>
+        <div class="facilities-grid">
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-bolt"></i></div>
+                <h4>Water & Electricity</h4>
+                <p>Shore power connections and fresh water available at the dock for all berths.</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-shower"></i></div>
+                <h4>Restrooms & Showers</h4>
+                <p>Clean restroom facilities with hot showers available for marina guests.</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-wifi"></i></div>
+                <h4>Wi-Fi Access</h4>
+                <p>Internet connectivity available in the marina area for staying connected.</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-building"></i></div>
+                <h4>On-Site Office</h4>
+                <p>Marina office for check-in, assistance, and coordination of services.</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>24-Hour Security</h4>
+                <p>Round-the-clock monitoring and security for your peace of mind.</p>
+            </div>
+            <div class="facility-card">
+                <div class="facility-icon"><i class="fas fa-gas-pump"></i></div>
+                <h4>Fuel Service</h4>
+                <p>Diesel and gasoline available on-site for convenient refueling.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section class="feature-highlights">
+        <div class="feature-highlights-grid">
+            <div class="feature-highlight-item">
+                <div class="feature-highlight-icon"><i class="fas fa-water"></i></div>
+                <h4>Protected Waters</h4>
+                <p>Calm, sheltered bay with minimal surge and wave action</p>
+            </div>
+            <div class="feature-highlight-item">
+                <div class="feature-highlight-icon"><i class="fas fa-walking"></i></div>
+                <h4>Walk to Town</h4>
+                <p>Just 10 minutes on foot to restaurants, shops, and services</p>
+            </div>
+            <div class="feature-highlight-item">
+                <div class="feature-highlight-icon"><i class="fas fa-tools"></i></div>
+                <h4>Full Service Yard</h4>
+                <p>Haul-out, repairs, and maintenance all in one location</p>
+            </div>
+            <div class="feature-highlight-item">
+                <div class="feature-highlight-icon"><i class="fas fa-users"></i></div>
+                <h4>Cruiser Community</h4>
+                <p>Active community of international cruisers year-round</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Amenities -->
+    <section class="section amenities-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Complete Services</p>
+            <h2 class="section-title">DETAILED AMENITIES</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-block">
+                <h3>Dockside Services</h3>
+                <ul class="amenity-list">
+                    <li>Fresh water connections at berths</li>
+                    <li>Electrical hookups (110V)</li>
+                    <li>Fuel delivery coordination</li>
+                    <li>Dinghy dock access</li>
+                    <li>Garbage and waste disposal</li>
+                </ul>
+            </div>
+            <div class="amenity-block">
+                <h3>Shore Facilities</h3>
+                <ul class="amenity-list">
+                    <li>Restroom facilities</li>
+                    <li>Hot showers</li>
+                    <li>Marina office</li>
+                    <li>Wi-Fi access</li>
+                    <li>Secure parking area</li>
+                </ul>
+            </div>
+            <div class="amenity-block">
+                <h3>Boatyard Access</h3>
+                <ul class="amenity-list">
+                    <li>Professional haul-out services</li>
+                    <li>Short and long-term storage</li>
+                    <li>DIY work permitted</li>
+                    <li>Professional repair services</li>
+                    <li>Parts ordering and sourcing</li>
+                </ul>
+            </div>
+            <div class="amenity-block">
+                <h3>Guest Services</h3>
+                <ul class="amenity-list">
+                    <li>Check-in assistance</li>
+                    <li>Local information and guidance</li>
+                    <li>Vendor coordination</li>
+                    <li>Mail receiving</li>
+                    <li>Emergency support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Walk to Town -->
+    <section class="section town-section">
+        <div class="town-grid">
+            <div class="town-content">
+                <p class="section-label">Local Convenience</p>
+                <h2 class="section-title">WALK TO TOWN</h2>
+                <div class="section-divider"></div>
+                <p>One of the biggest advantages of Tropical Marina is our proximity to the town of Luperón. A short 10-minute walk brings you to the heart of town, where you'll find everything you need.</p>
+                <p>From fresh groceries and hardware supplies to restaurants and medical services, you won't need a car to access daily essentials.</p>
+                <div class="town-amenities">
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-utensils"></i></div>
+                        <span>Restaurants</span>
+                    </div>
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <span>Grocery Stores</span>
+                    </div>
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-hammer"></i></div>
+                        <span>Hardware Shops</span>
+                    </div>
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-medkit"></i></div>
+                        <span>Medical Services</span>
+                    </div>
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-university"></i></div>
+                        <span>Banks & ATMs</span>
+                    </div>
+                    <div class="town-amenity">
+                        <div class="town-amenity-icon"><i class="fas fa-bus"></i></div>
+                        <span>Transport</span>
+                    </div>
+                </div>
+            </div>
+            <div class="town-image">
+                <img src="assets/luperon-town.webp" alt="Luperón town center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Information -->
+    <section class="section location-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Find Us</p>
+            <h2 class="section-title">LOCATION INFORMATION</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+        </div>
+        <div class="location-cards">
+            <div class="location-card">
+                <h4>GPS Coordinates & Distances</h4>
+                <div class="location-detail">
+                    <i class="fas fa-crosshairs"></i>
+                    <span><strong>Coordinates:</strong> 19°53.68' N, 70°57.23' W</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-walking"></i>
+                    <span><strong>To Town:</strong> 10 minute walk</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-car"></i>
+                    <span><strong>To Puerto Plata:</strong> 45 minutes</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-plane"></i>
+                    <span><strong>To POP Airport:</strong> 1 hour</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <h4>Approach Information</h4>
+                <div class="location-detail">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span><strong>VHF Channel:</strong> 68</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-water"></i>
+                    <span><strong>Bay Depth:</strong> 3-5 meters</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-ruler-vertical"></i>
+                    <span><strong>Draft Limit:</strong> 2.5 meters</span>
+                </div>
+                <div class="location-detail">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Contact marina for approach guidance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+
+    <section class="cta-section">
+
+        <h2>Ready to Get Started?</h2>
+
+        <p>Contact us to discuss your service needs or request a haul-out appointment.</p>
+
+        <a href="contact.html" class="btn btn-primary">Request Service</a>
+
+        <a href="boatyard.html" class="btn btn-outline">View Boatyard</a>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-main">TROPICAL MARINA</span>
+
+                    <span class="logo-sub">LUPERÓN BAY</span>
+
+                </div>
+
+                <p>Full-service marina and boatyard located in Luperón Bay, Dominican Republic—one of the Caribbean's safest hurricane anchorages.</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Navigation</h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+
+                    <li><a href="boatyard.html">Boatyard</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>More</h4>
+
+                <ul>
+
+                    <li><a href="#facilities">Facilities</a></li>
+
+                    <li><a href="boatyard.html#hurricane-storage">Hurricane Storage</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links footer-contact">
+
+                <h4>Contact Us</h4>
+
+                <p>Luperón, Puerto Plata<br>Dominican Republic</p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18099947231">+1 809 994-7231</a></p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18295892126">+1 829 589-2126</a></p>
+
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sd84alvarez@gmail.com">sd84alvarez@gmail.com</a></p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2024 Tropical Marina. All rights reserved.</p>
+
+            <div class="social-links">
+
+                <a href="#">Facebook</a>
+
+                <a href="#">YouTube</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+ 
+
+    <script>
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // ===== INPUT MODE TOGGLE =====
+        let currentInputMode = 'slider';
+
+        function setInputMode(mode) {
+            currentInputMode = mode;
+            const sliderInputs = document.getElementById('sliderInputs');
+            const manualInputs = document.getElementById('manualInputs');
+            const dotSlider = document.getElementById('dotSlider');
+            const dotManual = document.getElementById('dotManual');
+            const sliderLabel = document.getElementById('sliderLabel');
+            const manualLabel = document.getElementById('manualLabel');
+
+            if (mode === 'slider') {
+                sliderInputs.classList.remove('hidden');
+                manualInputs.classList.remove('active');
+                dotSlider.classList.add('active');
+                dotManual.classList.remove('active');
+                sliderLabel.classList.add('active');
+                manualLabel.classList.remove('active');
+                // Sync manual values to sliders
+                document.getElementById('boatLength').value = document.getElementById('manualLength').value;
+                document.getElementById('boatBeam').value = document.getElementById('manualBeam').value;
+                document.getElementById('stayDuration').value = document.getElementById('manualDuration').value;
+            } else {
+                sliderInputs.classList.add('hidden');
+                manualInputs.classList.add('active');
+                dotSlider.classList.remove('active');
+                dotManual.classList.add('active');
+                sliderLabel.classList.remove('active');
+                manualLabel.classList.add('active');
+                // Sync slider values to manual inputs
+                document.getElementById('manualLength').value = document.getElementById('boatLength').value;
+                document.getElementById('manualBeam').value = document.getElementById('boatBeam').value;
+                document.getElementById('manualDuration').value = document.getElementById('stayDuration').value;
+            }
+            calculator.calculate();
+        }
+
+        // ===== PRICE CALCULATOR =====
+        const calculator = {
+            // Pricing rates based on the marina price list (per foot per day)
+            rates: {
+                wetslip: {
+                    transient: 1.66,    // <7 days
+                    weekly: 1.20,       // 7-29 days
+                    monthly: 1.16,      // 30+ days
+                    longterm: 0.70,     // >6 months
+                    longtermPrepay: 0.40 // >6 months prepaid
+                },
+                dryrack: {
+                    transient: 13.00,   // per day flat
+                    weekly: 10.00,      // per day (70/week)
+                    monthly: 9.10,      // per day (273/month)
+                    longterm: 6.50,     // per day
+                    longtermPrepay: 4.67 // per day
+                },
+                hurricane: {
+                    transient: 15.00,   // per foot per day (premium)
+                    weekly: 12.00,
+                    monthly: 10.00,
+                    longterm: 8.00,
+                    longtermPrepay: 6.00
+                }
+            },
+            // Boat type multipliers
+            boatMultipliers: {
+                sailboat: 1.0,
+                powerboat: 1.0,
+                catamaran: 1.5,  // Wider beam, takes more space
+                trawler: 1.1
+            },
+
+            init() {
+                this.lengthSlider = document.getElementById('boatLength');
+                this.beamSlider = document.getElementById('boatBeam');
+                this.durationSlider = document.getElementById('stayDuration');
+                this.serviceSelect = document.getElementById('serviceType');
+                this.boatSelect = document.getElementById('boatType');
+
+                // Manual input fields
+                this.manualLength = document.getElementById('manualLength');
+                this.manualBeam = document.getElementById('manualBeam');
+                this.manualDuration = document.getElementById('manualDuration');
+
+                this.lengthValue = document.getElementById('lengthValue');
+                this.beamValue = document.getElementById('beamValue');
+                this.durationValue = document.getElementById('durationValue');
+                this.totalPrice = document.getElementById('totalPrice');
+                this.priceBreakdown = document.getElementById('priceBreakdown');
+                this.rateApplied = document.getElementById('rateApplied');
+
+                // Add event listeners for sliders
+                [this.lengthSlider, this.beamSlider, this.durationSlider].forEach(slider => {
+                    slider.addEventListener('input', () => this.calculate());
+                });
+
+                // Add event listeners for manual inputs
+                [this.manualLength, this.manualBeam, this.manualDuration].forEach(input => {
+                    input.addEventListener('input', () => this.calculate());
+                });
+
+                [this.serviceSelect, this.boatSelect].forEach(select => {
+                    select.addEventListener('change', () => this.calculate());
+                });
+
+                this.calculate();
+            },
+
+            getRateCategory(days) {
+                if (days < 7) return { category: 'transient', label: 'Transient Rate (<7 days)' };
+                if (days < 30) return { category: 'weekly', label: 'Weekly Rate (7-29 days)' };
+                if (days < 180) return { category: 'monthly', label: 'Monthly Rate (30+ days)' };
+                return { category: 'longterm', label: 'Long-term Rate (6+ months)' };
+            },
+
+            calculate() {
+                let length, beam, days;
+
+                // Get values based on current input mode
+                if (currentInputMode === 'slider') {
+                    length = parseInt(this.lengthSlider.value);
+                    beam = parseInt(this.beamSlider.value);
+                    days = parseInt(this.durationSlider.value);
+                } else {
+                    length = parseInt(this.manualLength.value) || 20;
+                    beam = parseInt(this.manualBeam.value) || 8;
+                    days = parseInt(this.manualDuration.value) || 1;
+                    // Clamp values to valid ranges
+                    length = Math.max(20, Math.min(65, length));
+                    beam = Math.max(8, Math.min(20, beam));
+                    days = Math.max(1, Math.min(365, days));
+                }
+
+                const service = this.serviceSelect.value;
+                const boatType = this.boatSelect.value;
+
+                // Update display values
+                this.lengthValue.textContent = `${length} ft`;
+                this.beamValue.textContent = `${beam} ft`;
+                this.durationValue.textContent = days === 1 ? '1 day' : `${days} days`;
+
+                // Get rate category
+                const { category, label } = this.getRateCategory(days);
+                const baseRate = this.rates[service][category];
+                const boatTypeMultiplier = this.boatMultipliers[boatType];
+
+                // Calculate beam factor - wider boats take more slip space
+                // Standard beam-to-length ratio is ~0.28, charge extra for wider boats
+                const standardBeamRatio = 0.28;
+                const actualBeamRatio = beam / length;
+                const beamFactor = actualBeamRatio > standardBeamRatio
+                    ? 1 + ((actualBeamRatio - standardBeamRatio) * 2)
+                    : 1;
+
+                const totalMultiplier = boatTypeMultiplier * beamFactor;
+
+                let total, breakdown;
+
+                if (service === 'dryrack') {
+                    // Dry rack is flat rate per day, but beam affects space needed
+                    total = baseRate * days * totalMultiplier;
+                    breakdown = `$${baseRate.toFixed(2)}/day × ${days} days`;
+                } else {
+                    // Wet slip and hurricane are per foot per day
+                    total = baseRate * length * days * totalMultiplier;
+                    breakdown = `${length} ft × $${baseRate.toFixed(2)}/ft/day × ${days} days`;
+                }
+
+                // Build multiplier explanation
+                let multiplierNote = '';
+                if (boatTypeMultiplier > 1) {
+                    multiplierNote += `${boatTypeMultiplier}x (${boatType})`;
+                }
+                if (beamFactor > 1) {
+                    if (multiplierNote) multiplierNote += ' + ';
+                    multiplierNote += `${beamFactor.toFixed(2)}x (${beam}ft beam)`;
+                }
+                if (multiplierNote) {
+                    breakdown += ` × ${multiplierNote}`;
+                }
+
+                // Animate the price change
+                this.animatePrice(total);
+                this.priceBreakdown.textContent = breakdown;
+                this.rateApplied.textContent = label;
+            },
+
+            animatePrice(target) {
+                const current = parseFloat(this.totalPrice.textContent.replace(/[$,]/g, '')) || 0;
+                const diff = target - current;
+                const steps = 20;
+                const stepValue = diff / steps;
+                let step = 0;
+
+                const animate = () => {
+                    step++;
+                    const value = current + (stepValue * step);
+                    this.totalPrice.textContent = '$' + Math.round(value).toLocaleString();
+                    if (step < steps) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        this.totalPrice.textContent = '$' + Math.round(target).toLocaleString();
+                    }
+                };
+                animate();
+            }
+        };
+
+        // ===== SCROLL ANIMATIONS =====
+        const animateOnScroll = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        };
+
+        const addAnimationClasses = () => {
+            document.querySelectorAll('.section-label').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up');
+            });
+            document.querySelectorAll('.section-title').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up');
+            });
+            document.querySelectorAll('.section-divider').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-scale');
+            });
+            document.querySelectorAll('.service-card').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 6) + 1}`);
+            });
+            document.querySelectorAll('.boat-type').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 4) + 1}`);
+            });
+            document.querySelectorAll('.calculator-box').forEach(el => {
+                el.classList.add('animate-on-scroll', 'animate-scale');
+            });
+            document.querySelectorAll('.footer-brand, .footer-links').forEach((el, i) => {
+                el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${i + 1}`);
+            });
+        };
+
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            calculator.init();
+            addAnimationClasses();
+            animateOnScroll();
+        });
+
+    </script>
+
+</body>
+
+</html>

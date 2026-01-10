@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Tropical Marina - Luperón Bay, Dominican Republic</title>
+
+    <meta name="description" content="Learn about Tropical Marina's history, our experienced team, and why Luperón Bay has been a trusted safe harbor for cruising sailors for over 30 years.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+ 
+
+        :root {
+
+            --primary-dark: #0a1628;
+
+            --secondary-dark: #132337;
+
+            --accent-blue: #1a3a5c;
+
+            --highlight: #3d8bc9;
+
+            --text-light: #ffffff;
+
+            --text-muted: #a8b5c4;
+
+            --text-warm: #e8dcc4;
+
+            --ocean-gradient: linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #2d5a7b 100%);
+
+        }
+
+ 
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+ 
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            background-color: var(--primary-dark);
+
+            color: var(--text-light);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+ 
+
+        /* Navigation */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            z-index: 1000;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(10, 22, 40, 0.98);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+ 
+
+        .logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+
+        }
+
+ 
+
+        .logo-main {
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            color: var(--text-light);
+
+            text-decoration: none;
+
+            border: 2px solid var(--text-light);
+
+            padding: 8px 16px;
+
+        }
+
+ 
+
+        .logo-sub {
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            color: var(--text-muted);
+
+            margin-top: 4px;
+
+        }
+
+ 
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 40px;
+
+            list-style: none;
+
+        }
+
+ 
+
+        .nav-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: color 0.3s ease;
+
+            font-weight: 500;
+
+        }
+
+ 
+
+        .nav-links a:hover,
+
+        .nav-links a.active {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .nav-lang {
+
+            font-size: 12px;
+
+            color: var(--text-muted);
+
+            border: 1px solid var(--text-muted);
+
+            padding: 5px 12px;
+
+            cursor: pointer;
+
+        }
+
+ 
+
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+        }
+
+        .menu-toggle {
+
+            display: none;
+
+            flex-direction: column;
+
+            cursor: pointer;
+
+            gap: 5px;
+
+            padding: 8px;
+
+        }
+
+
+
+        .menu-toggle span {
+
+            width: 25px;
+
+            height: 2px;
+
+            background: var(--text-light);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        /* Page Header */
+
+        .page-header {
+
+            padding: 180px 50px 100px;
+
+            background: var(--ocean-gradient);
+
+            position: relative;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .page-header-bg {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background-image: url('assets/about-header-bay.webp');
+
+            background-size: cover;
+
+            background-position: center;
+
+            opacity: 0.3;
+
+        }
+
+ 
+
+        .page-header-overlay {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.52) 0%, rgba(10, 22, 40, 0.39) 50%, rgba(10, 22, 40, 0.585) 100%);
+
+        }
+
+ 
+
+        .page-header-content {
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+ 
+
+        .page-label {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .page-title {
+
+            font-size: 64px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .page-divider {
+
+            width: 80px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        /* Section Styles */
+
+        .section {
+
+            padding: 100px 50px;
+
+        }
+
+ 
+
+        .section-label {
+
+            font-size: 12px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .section-title {
+
+            font-size: 48px;
+
+            font-weight: 800;
+
+            line-height: 1.1;
+
+            margin-bottom: 30px;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        .section-divider {
+
+            width: 60px;
+
+            height: 4px;
+
+            background: var(--highlight);
+
+            margin-bottom: 30px;
+
+        }
+
+ 
+
+        /* Story Section */
+
+        .story-section {
+
+            background: var(--secondary-dark);
+
+        }
+
+ 
+
+        .story-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            align-items: center;
+
+        }
+
+ 
+
+        .story-content p {
+
+            color: var(--text-muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+
+        }
+
+ 
+
+        .story-image {
+
+            position: relative;
+
+        }
+
+ 
+
+        .story-image img {
+
+            width: 100%;
+
+            height: 500px;
+
+            object-fit: cover;
+
+        }
+
+ 
+
+        .story-image-overlay {
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            right: 0;
+
+            padding: 30px;
+
+            background: linear-gradient(0deg, rgba(10, 22, 40, 0.9) 0%, transparent 100%);
+
+        }
+
+ 
+
+        .story-image-overlay p {
+
+            font-size: 14px;
+
+            color: var(--text-muted);
+
+            font-style: italic;
+
+        }
+
+ 
+
+        /* Location Section */
+
+        .location-section {
+
+            background: var(--primary-dark);
+
+        }
+
+ 
+
+        .location-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            align-items: center;
+
+        }
+
+ 
+
+        .location-content p {
+
+            color: var(--text-muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+
+        }
+
+ 
+
+        .location-features {
+
+            list-style: none;
+
+            margin-top: 30px;
+
+        }
+
+ 
+
+        .location-features li {
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            font-size: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .location-features li::before {
+
+            content: '✓';
+
+            color: var(--highlight);
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        .location-map {
+
+            background: var(--secondary-dark);
+
+            padding: 40px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .location-map img {
+
+            width: 100%;
+
+            max-width: 450px;
+
+            opacity: 0.8;
+
+        }
+
+ 
+
+        .coordinates {
+
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: rgba(61, 139, 201, 0.1);
+
+            border: 1px solid rgba(61, 139, 201, 0.3);
+
+        }
+
+ 
+
+        .coordinates p {
+
+            font-size: 14px;
+
+            color: var(--text-muted);
+
+        }
+
+ 
+
+        .coordinates strong {
+
+            color: var(--text-light);
+
+            font-family: monospace;
+
+            font-size: 16px;
+
+        }
+
+ 
+
+        /* Team Section */
+
+        .team-section {
+
+            background: var(--secondary-dark);
+
+        }
+
+ 
+
+        .team-intro {
+
+            max-width: 800px;
+
+            margin: 0 auto 60px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .team-intro p {
+
+            color: var(--text-muted);
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+        }
+
+ 
+
+        .team-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .team-card {
+
+            background: var(--primary-dark);
+
+            overflow: hidden;
+
+            transition: transform 0.3s ease;
+
+        }
+
+ 
+
+        .team-card:hover {
+
+            transform: translateY(-10px);
+
+        }
+
+ 
+
+        .team-image {
+
+            height: 300px;
+
+            background-size: cover;
+
+            background-position: center top;
+
+            position: relative;
+
+        }
+
+ 
+
+        .team-image-overlay {
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 100px;
+
+            background: linear-gradient(0deg, var(--primary-dark) 0%, transparent 100%);
+
+        }
+
+ 
+
+        .team-info {
+
+            padding: 25px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .team-info h3 {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+ 
+
+        .team-info p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+        }
+
+ 
+
+        /* Values Section */
+
+        .values-section {
+
+            background: var(--primary-dark);
+
+        }
+
+ 
+
+        .values-intro {
+
+            max-width: 700px;
+
+            margin-bottom: 60px;
+
+        }
+
+ 
+
+        .values-intro p {
+
+            color: var(--text-muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+        }
+
+ 
+
+        .values-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 40px;
+
+            max-width: 1200px;
+
+        }
+
+ 
+
+        .value-card {
+
+            padding: 40px;
+
+            background: var(--secondary-dark);
+
+            border-left: 4px solid var(--highlight);
+
+            transition: all 0.3s ease;
+
+        }
+
+ 
+
+        .value-card:hover {
+
+            background: rgba(61, 139, 201, 0.1);
+
+        }
+
+ 
+
+        .value-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 20px;
+
+        }
+
+ 
+
+        .value-card h3 {
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+ 
+
+        .value-card p {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+ 
+
+        /* CTA Section */
+
+        .cta-section {
+
+            padding: 100px 50px;
+
+            background: var(--accent-blue);
+
+            text-align: center;
+
+        }
+
+ 
+
+        .cta-section h2 {
+
+            font-size: 36px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            text-transform: uppercase;
+
+        }
+
+ 
+
+        .cta-section p {
+
+            color: var(--text-muted);
+
+            font-size: 16px;
+
+            max-width: 600px;
+
+            margin: 0 auto 40px;
+
+        }
+
+ 
+
+        .btn {
+
+            padding: 15px 35px;
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+
+            display: inline-block;
+
+        }
+
+ 
+
+        .btn-primary {
+
+            background: var(--highlight);
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .btn-primary:hover {
+
+            background: #4a9ed8;
+
+            transform: translateY(-2px);
+
+        }
+
+ 
+
+        .btn-outline {
+
+            background: transparent;
+
+            color: var(--text-light);
+
+            border: 2px solid var(--text-light);
+
+        }
+
+ 
+
+        .btn-outline:hover {
+
+            background: var(--text-light);
+
+            color: var(--primary-dark);
+
+        }
+
+ 
+
+        /* Footer */
+
+        footer {
+
+            background: var(--primary-dark);
+
+            padding: 60px 50px 30px;
+
+        }
+
+ 
+
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+
+            gap: 60px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+            padding-bottom: 40px;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        }
+
+ 
+
+        .footer-brand .logo-main {
+
+            font-size: 20px;
+
+        }
+
+ 
+
+        .footer-brand p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-top: 20px;
+
+            line-height: 1.7;
+
+        }
+
+ 
+
+        .footer-links h4 {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+
+            font-weight: 600;
+
+        }
+
+ 
+
+        .footer-links ul {
+
+            list-style: none;
+
+        }
+
+ 
+
+        .footer-links li {
+
+            margin-bottom: 12px;
+
+        }
+
+ 
+
+        .footer-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            transition: color 0.3s ease;
+
+        }
+
+ 
+
+        .footer-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        .footer-contact p {
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .footer-contact a {
+
+            color: var(--highlight);
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .footer-bottom {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding-top: 30px;
+
+            max-width: 1400px;
+
+            margin: 0 auto;
+
+        }
+
+ 
+
+        .footer-bottom p {
+
+            color: var(--text-muted);
+
+            font-size: 11px;
+
+        }
+
+ 
+
+        .social-links {
+
+            display: flex;
+
+            gap: 20px;
+
+        }
+
+ 
+
+        .social-links a {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .social-links a:hover {
+
+            color: var(--text-light);
+
+        }
+
+ 
+
+        /* Responsive */
+
+        @media (max-width: 992px) {
+
+            nav {
+
+                padding: 15px 20px;
+
+            }
+
+            .logo-main {
+
+                font-size: 18px;
+
+                padding: 6px 12px;
+
+            }
+
+            .logo-sub {
+
+                font-size: 8px;
+
+                letter-spacing: 3px;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                right: 0;
+
+                background: rgba(10, 22, 40, 0.98);
+
+                flex-direction: column;
+
+                padding: 30px;
+
+                gap: 20px;
+
+            }
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+            .nav-lang {
+
+                font-size: 11px;
+
+                padding: 4px 10px;
+
+            }
+
+            .page-header {
+
+                padding: 140px 30px 80px;
+
+            }
+
+            .page-title {
+
+                font-size: 42px;
+
+            }
+
+            .section {
+
+                padding: 80px 30px;
+
+            }
+
+            .section-title {
+
+                font-size: 36px;
+
+            }
+
+            .story-grid,
+
+            .location-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .team-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+ 
+
+        @media (max-width: 576px) {
+
+            .page-title {
+
+                font-size: 32px;
+
+            }
+
+            .team-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                gap: 20px;
+
+                text-align: center;
+
+            }
+
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        @keyframes bounceIn { 0% { opacity: 0; transform: scale(0.3); } 50% { opacity: 1; transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .animate-on-scroll { opacity: 0; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .animate-on-scroll.animate-fade-up { transform: translateY(40px); }
+        .animate-on-scroll.animate-fade-left { transform: translateX(-40px); }
+        .animate-on-scroll.animate-fade-right { transform: translateX(40px); }
+        .animate-on-scroll.animate-scale { transform: scale(0.8); }
+        .animate-on-scroll.animated { opacity: 1; transform: translateY(0) translateX(0) scale(1); }
+        .stagger-1 { transition-delay: 0.1s; } .stagger-2 { transition-delay: 0.2s; } .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; } .stagger-5 { transition-delay: 0.5s; } .stagger-6 { transition-delay: 0.6s; }
+        .page-header-content { animation: fadeInUp 1s ease-out 0.3s both; }
+        .page-title { animation: scaleIn 0.8s ease-out 0.5s both; }
+        .page-divider { animation: scaleIn 0.6s ease-out 0.7s both; }
+        .page-subtitle { animation: fadeInUp 0.8s ease-out 0.9s both; }
+        .btn { position: relative; overflow: hidden; transition: all 0.4s ease; }
+        .btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: rgba(255, 255, 255, 0.2); border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.6s ease, height 0.6s ease; }
+        .btn:hover::before { width: 300px; height: 300px; }
+        .btn:active { transform: scale(0.95); }
+        .logo-main { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .logo-main:hover { background: var(--text-light); color: var(--primary-dark); transform: scale(1.05); }
+        .nav-links a { position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--highlight); transition: width 0.3s ease; }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        .team-card { transition: all 0.4s ease; }
+        .team-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .value-card { transition: all 0.4s ease; }
+        .value-card:hover { transform: translateY(-5px); border-bottom-color: var(--highlight); }
+        .stat-item { transition: all 0.3s ease; }
+        .stat-item:hover { transform: scale(1.05); }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="index.html" class="logo-main">TROPICAL MARINA</a>
+
+            <span class="logo-sub">LUPERÓN BAY</span>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="about.html" class="active">About</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="boatyard.html">Boatyard</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+
+            <div class="nav-lang">EN</div>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+ 
+
+    <!-- Page Header -->
+
+    <header class="page-header">
+
+        <div class="page-header-bg"></div>
+
+        <div class="page-header-overlay"></div>
+
+        <div class="page-header-content">
+
+            <p class="page-label">Who We Are</p>
+
+            <h1 class="page-title">About Us</h1>
+
+            <div class="page-divider"></div>
+
+        </div>
+
+    </header>
+
+ 
+
+    <!-- Story Section -->
+
+    <section class="section story-section">
+
+        <div class="story-grid">
+
+            <div class="story-content">
+
+                <p class="section-label">Our Story</p>
+
+                <h2 class="section-title">A TRUSTED NAME IN LUPERÓN</h2>
+
+                <div class="section-divider"></div>
+
+                <p>
+
+                    Tropical Marina has served the cruising community for decades, providing a safe haven for sailors navigating the Caribbean. Located deep inside Luperón Bay—one of the most protected natural harbors in the region—our marina has become synonymous with quality service, skilled workmanship, and genuine hospitality.
+
+                </p>
+
+                <p>
+
+                    What began as a small operation has grown into a full-service marina and boatyard, yet we've never lost sight of what matters most: treating every vessel with care and every crew like family. Our roots in this community run deep, and that connection shapes everything we do.
+
+                </p>
+
+                <p>
+
+                    Today, Tropical Marina continues to evolve, with plans underway for a 60-ton hydraulic boat lift to complement our proven tractor-and-trailer haul-out system. Through every upgrade, our commitment remains the same: providing cruisers with the safe, reliable, and welcoming service they deserve.
+
+                </p>
+
+            </div>
+
+            <div class="story-image">
+
+                <img src="assets/about-marina-view.webp" alt="Aerial view of Tropical Marina in Luperón Bay">
+
+                <div class="story-image-overlay">
+
+                    <p>Tropical Marina, nestled in the protected waters of Luperón Bay</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Location Section -->
+
+    <section class="section location-section">
+
+        <div class="location-grid">
+
+            <div class="location-map">
+
+                <img src="assets/dominican-republic-map.webp" alt="Map showing Luperón location in Dominican Republic">
+
+                <div class="coordinates">
+
+                    <p>GPS Coordinates</p>
+
+                    <strong>19°53.68' N, 70°57.23' W</strong>
+
+                </div>
+
+            </div>
+
+            <div class="location-content">
+
+                <p class="section-label">Strategic Location</p>
+
+                <h2 class="section-title">WHY LUPERÓN BAY</h2>
+
+                <div class="section-divider"></div>
+
+                <p>
+
+                    Luperón Bay sits on the northern coast of the Dominican Republic, in the Puerto Plata province. Its unique geography—a deep, enclosed natural harbor wrapped by hills and dense mangrove forests—creates one of the Caribbean's most sheltered anchorages.
+
+                </p>
+
+                <p>
+
+                    For cruising sailors, this means calm waters, minimal surge, and exceptional protection during hurricane season. The bay's reputation has made it a trusted stop for international cruisers for over 30 years.
+
+                </p>
+
+                <ul class="location-features">
+
+                    <li>One of the Caribbean's safest natural hurricane holes</li>
+
+                    <li>Protected on all sides by hills and mangroves</li>
+
+                    <li>Calm, minimal-surge anchorage year-round</li>
+
+                    <li>Walking distance to town amenities and services</li>
+
+                    <li>Established cruising community and support network</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Team Section -->
+
+    <section class="section team-section">
+
+        <div class="team-intro">
+
+            <p class="section-label">Meet the Team</p>
+
+            <h2 class="section-title">SKILLED HANDS, WARM HEARTS</h2>
+
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+
+            <p>
+
+                Our team brings together years of experience in marine services, from haul-outs and hull work to mechanical repairs and bottom painting. But what truly sets us apart is our approach: every boat matters, every job gets our full attention, and every customer becomes part of our extended marina family.
+
+            </p>
+
+        </div>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+
+                <div class="team-image" style="background-image: url('assets/team-crew-haulout.webp');">
+
+                    <div class="team-image-overlay"></div>
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>Haul-Out Crew</h3>
+
+                    <p>Expert handling of vessels up to 65 feet</p>
+
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="team-image" style="background-image: url('assets/team-yard-workers.webp');">
+
+                    <div class="team-image-overlay"></div>
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>Yard Team</h3>
+
+                    <p>Skilled in fiberglass, painting, and hull work</p>
+
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="team-image" style="background-image: url('assets/team-office-staff.webp');">
+
+                    <div class="team-image-overlay"></div>
+
+                </div>
+
+                <div class="team-info">
+
+                    <h3>Marina Staff</h3>
+
+                    <p>Here to help with everything you need</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Values Section -->
+
+    <section class="section values-section">
+
+        <div class="values-intro">
+
+            <p class="section-label">What We Stand For</p>
+
+            <h2 class="section-title">OUR VALUES</h2>
+
+            <div class="section-divider"></div>
+
+            <p>
+
+                At Tropical Marina, our work is guided by principles that have served us—and our customers—well for years.
+
+            </p>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <div class="value-icon"><i class="fas fa-anchor"></i></div>
+
+                <h3>Safety First</h3>
+
+                <p>Your vessel's security is our top priority. From 24-hour monitoring to hurricane preparation protocols, we take every precaution to protect your boat.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon"><i class="fas fa-wrench"></i></div>
+
+                <h3>Quality Workmanship</h3>
+
+                <p>We take pride in doing the job right. Our experienced team delivers professional results, whether it's a simple bottom job or major hull repairs.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon"><i class="fas fa-handshake"></i></div>
+
+                <h3>Community Spirit</h3>
+
+                <p>Cruisers aren't just customers—they're part of our community. We foster a welcoming atmosphere where sailors support each other.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- CTA Section -->
+
+    <section class="cta-section">
+
+        <h2>Ready to Visit?</h2>
+
+        <p>Contact us to learn more about berthing, storage, or boatyard services at Tropical Marina.</p>
+
+        <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+
+    </section>
+
+ 
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-main">TROPICAL MARINA</span>
+
+                    <span class="logo-sub">LUPERÓN BAY</span>
+
+                </div>
+
+                <p>Full-service marina and boatyard located in Luperón Bay, Dominican Republic—one of the Caribbean's safest hurricane anchorages.</p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>Navigation</h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="services.html">Services</a></li>
+
+                    <li><a href="boatyard.html">Boatyard</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h4>More</h4>
+
+                <ul>
+
+                    <li><a href="services.html#facilities">Facilities</a></li>
+
+                    <li><a href="boatyard.html#hurricane-storage">Hurricane Storage</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links footer-contact">
+
+                <h4>Contact Us</h4>
+
+                <p>Luperón, Puerto Plata<br>Dominican Republic</p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18099947231">+1 809 994-7231</a></p>
+
+                <p><i class="fas fa-phone"></i> <a href="tel:+18295892126">+1 829 589-2126</a></p>
+
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sd84alvarez@gmail.com">sd84alvarez@gmail.com</a></p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2024 Tropical Marina. All rights reserved.</p>
+
+            <div class="social-links">
+
+                <a href="#">Facebook</a>
+
+                <a href="#">YouTube</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+ 
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Scroll Animation Observer
+        const animateOnScroll = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('animated');
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        };
+
+        const addAnimationClasses = () => {
+            document.querySelectorAll('.section-label').forEach(el => el.classList.add('animate-on-scroll', 'animate-fade-up'));
+            document.querySelectorAll('.section-title').forEach(el => el.classList.add('animate-on-scroll', 'animate-fade-up'));
+            document.querySelectorAll('.section-divider').forEach(el => el.classList.add('animate-on-scroll', 'animate-scale'));
+            document.querySelectorAll('.team-card, .value-card').forEach((el, i) => el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 6) + 1}`));
+            document.querySelectorAll('.stat-item').forEach((el, i) => el.classList.add('animate-on-scroll', 'animate-scale', `stagger-${i + 1}`));
+            document.querySelectorAll('.footer-brand, .footer-links').forEach((el, i) => el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${i + 1}`));
+        };
+
+        document.addEventListener('DOMContentLoaded', () => { addAnimationClasses(); animateOnScroll(); });
+    </script>
+
+</body>
+
+</html>

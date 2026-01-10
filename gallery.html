@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Tropical Marina - Photos from Luperon Bay</title>
+    <meta name="description" content="View photos of Tropical Marina's boatyard, facilities, haul-out operations, and the beautiful Luperon Bay in the Dominican Republic.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #0a1628;
+            --secondary-dark: #132337;
+            --accent-blue: #1a3a5c;
+            --highlight: #3d8bc9;
+            --text-light: #ffffff;
+            --text-muted: #a8b5c4;
+            --ocean-gradient: linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #2d5a7b 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-main {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--text-light);
+            text-decoration: none;
+            border: 2px solid var(--text-light);
+            padding: 8px 16px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-light);
+        }
+
+        .nav-lang {
+            font-size: 12px;
+            color: var(--text-muted);
+            border: 1px solid var(--text-muted);
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 180px 50px 100px;
+            background: var(--ocean-gradient);
+            position: relative;
+            text-align: center;
+        }
+
+        .page-header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('assets/gallery-header.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.35;
+        }
+
+        .page-header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(10, 22, 40, 0.52) 0%, rgba(10, 22, 40, 0.39) 50%, rgba(10, 22, 40, 0.585) 100%);
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .page-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .page-title {
+            font-size: 64px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .page-subtitle {
+            max-width: 600px;
+            margin: 30px auto 0;
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .page-divider {
+            width: 80px;
+            height: 4px;
+            background: var(--highlight);
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 50px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: var(--highlight);
+            margin-bottom: 30px;
+        }
+
+        /* Gallery Sections */
+        .gallery-section {
+            background: var(--secondary-dark);
+        }
+
+        .gallery-section.alt {
+            background: var(--primary-dark);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1400px;
+            margin: 40px auto 0;
+        }
+
+        .gallery-grid.large {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+            height: 100%;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 22, 40, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            background: rgba(61, 139, 201, 0.3);
+        }
+
+        .gallery-item-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(0deg, rgba(10, 22, 40, 0.9) 0%, transparent 100%);
+            z-index: 10;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-item-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-item-caption h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .gallery-item-caption p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Category Tabs */
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-tab {
+            padding: 12px 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-tab:hover,
+        .gallery-tab.active {
+            border-color: var(--highlight);
+            color: var(--text-light);
+            background: rgba(61, 139, 201, 0.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 50px;
+            background: var(--accent-blue);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--highlight);
+            color: var(--text-light);
+        }
+
+        .btn-primary:hover {
+            background: #4a9ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background: var(--text-light);
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            padding: 60px 50px 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand .logo-main {
+            font-size: 20px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+
+        .footer-contact p {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 11px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .gallery-grid.large {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .logo-main {
+                font-size: 18px;
+                padding: 6px 12px;
+            }
+            .logo-sub {
+                font-size: 8px;
+                letter-spacing: 3px;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-lang {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+            .page-header {
+                padding: 140px 30px 80px;
+            }
+            .page-title {
+                font-size: 42px;
+            }
+            .section {
+                padding: 80px 30px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-item.tall,
+            .gallery-item.wide {
+                grid-row: auto;
+                grid-column: auto;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 32px;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery-tab {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            .cta-section .btn {
+                display: block;
+                margin: 10px auto;
+            }
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        .animate-on-scroll { opacity: 0; transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .animate-on-scroll.animate-fade-up { transform: translateY(40px); }
+        .animate-on-scroll.animate-scale { transform: scale(0.8); }
+        .animate-on-scroll.animated { opacity: 1; transform: translateY(0) translateX(0) scale(1); }
+        .stagger-1 { transition-delay: 0.1s; } .stagger-2 { transition-delay: 0.2s; } .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; } .stagger-5 { transition-delay: 0.5s; } .stagger-6 { transition-delay: 0.6s; }
+        .page-header-content { animation: fadeInUp 1s ease-out 0.3s both; }
+        .page-title { animation: scaleIn 0.8s ease-out 0.5s both; }
+        .page-divider { animation: scaleIn 0.6s ease-out 0.7s both; }
+        .page-subtitle { animation: fadeInUp 0.8s ease-out 0.9s both; }
+        .btn { position: relative; overflow: hidden; transition: all 0.4s ease; }
+        .btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: rgba(255, 255, 255, 0.2); border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.6s ease, height 0.6s ease; }
+        .btn:hover::before { width: 300px; height: 300px; }
+        .logo-main { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .logo-main:hover { background: var(--text-light); color: var(--primary-dark); transform: scale(1.05); }
+        .nav-links a { position: relative; }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--highlight); transition: width 0.3s ease; }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="index.html" class="logo-main">TROPICAL MARINA</a>
+            <span class="logo-sub">LUPERON BAY</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="boatyard.html">Boatyard</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="nav-lang">EN</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <p class="page-label">See Our Marina</p>
+            <h1 class="page-title">Gallery</h1>
+            <div class="page-divider"></div>
+            <p class="page-subtitle">
+                Explore Tropical Marina through our photo gallery. From haul-out operations to the beautiful waters of Luperon Bay, see what makes our marina special.
+            </p>
+        </div>
+    </header>
+
+    <!-- Boatyard Gallery -->
+    <section class="section gallery-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Our Boatyard</p>
+            <h2 class="section-title">YARD OPERATIONS</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.8;">
+                Professional haul-out services and boatyard work in our full-service facility.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('assets/gallery-yard-1.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Haul-Out Operations</h4>
+                    <p>Tractor and trailer system at work</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/gallery-yard-2.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Bottom Work</h4>
+                    <p>Professional bottom painting</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/gallery-yard-3.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Hardstand Storage</h4>
+                    <p>Secure vessel storage on blocks</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/gallery-yard-4.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Yard Overview</h4>
+                    <p>Spacious working yard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marina & Bay Gallery -->
+    <section class="section gallery-section alt">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Luperon Bay</p>
+            <h2 class="section-title">MARINA & SURROUNDINGS</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.8;">
+                The natural beauty and protected waters of Luperon Bay.
+            </p>
+        </div>
+        <div class="gallery-grid large">
+            <div class="gallery-item tall" style="background-image: url('assets/luperon-aerial.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Luperon Bay Aerial</h4>
+                    <p>Protected natural harbor</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/about-marina-aerial.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Marina Aerial View</h4>
+                    <p>Tropical Marina from above</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/about-marina-view.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Marina View</h4>
+                    <p>Our facilities</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/boatyard-aerial.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Boatyard Aerial</h4>
+                    <p>Expansive yard space</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/fishing-luperon.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Fishing Waters</h4>
+                    <p>World-class fishing nearby</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hurricane Storage Gallery -->
+    <section class="section gallery-section">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Secure Storage</p>
+            <h2 class="section-title">HURRICANE PREPARATION</h2>
+            <div class="section-divider" style="margin: 0 auto 30px;"></div>
+            <p style="color: var(--text-muted); font-size: 15px; line-height: 1.8;">
+                Professional tie-down procedures and secure storage for hurricane season.
+            </p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item wide" style="background-image: url('assets/security-monitoring.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Secure Storage</h4>
+                    <p>Ground tie-downs and professional blocking</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/haulout-tractor.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Haul-Out System</h4>
+                    <p>Heavy-duty tractor and trailer</p>
+                </div>
+            </div>
+            <div class="gallery-item" style="background-image: url('assets/boatyard-header.webp');">
+                <div class="gallery-item-caption">
+                    <h4>Boatyard</h4>
+                    <p>Protected by surrounding hills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Visit Tropical Marina</h2>
+        <p>Ready to see our facilities in person? Contact us to schedule a visit or learn more about our services.</p>
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-main">TROPICAL MARINA</span>
+                    <span class="logo-sub">LUPERON BAY</span>
+                </div>
+                <p>Full-service marina and boatyard located in Luperon Bay, Dominican Republic - one of the Caribbean's safest hurricane anchorages.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="boatyard.html">Boatyard</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="services.html#facilities">Facilities</a></li>
+                    <li><a href="boatyard.html#hurricane-storage">Hurricane Storage</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links footer-contact">
+                <h4>Contact Us</h4>
+                <p>Luperon, Puerto Plata<br>Dominican Republic</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+18099947231">+1 809 994-7231</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+18295892126">+1 829 589-2126</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sd84alvarez@gmail.com">sd84alvarez@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tropical Marina. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        const animateOnScroll = () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('animated'); });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        };
+
+        const addAnimationClasses = () => {
+            document.querySelectorAll('.section-label').forEach(el => el.classList.add('animate-on-scroll', 'animate-fade-up'));
+            document.querySelectorAll('.section-title').forEach(el => el.classList.add('animate-on-scroll', 'animate-fade-up'));
+            document.querySelectorAll('.section-divider').forEach(el => el.classList.add('animate-on-scroll', 'animate-scale'));
+            document.querySelectorAll('.gallery-item').forEach((el, i) => el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${(i % 6) + 1}`));
+            document.querySelectorAll('.footer-brand, .footer-links').forEach((el, i) => el.classList.add('animate-on-scroll', 'animate-fade-up', `stagger-${i + 1}`));
+        };
+
+        document.addEventListener('DOMContentLoaded', () => { addAnimationClasses(); animateOnScroll(); });
+    </script>
+</body>
+</html>
