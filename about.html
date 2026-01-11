@@ -600,62 +600,63 @@
 
  
 
-        .location-map {
-
-            background: var(--secondary-dark);
-
-            padding: 40px;
-
-            text-align: center;
-
+        .map-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
- 
-
-        .location-map img {
-
+        .google-map {
             width: 100%;
-
-            max-width: 450px;
-
-            opacity: 0.8;
-
+            height: 500px;
+            border: none;
+            display: block;
         }
 
- 
-
-        .coordinates {
-
-            margin-top: 30px;
-
-            padding: 20px;
-
-            background: rgba(61, 139, 201, 0.1);
-
-            border: 1px solid rgba(61, 139, 201, 0.3);
-
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 22, 40, 0.95), transparent);
+            padding: 30px;
+            display: flex;
+            align-items: flex-end;
+            gap: 15px;
         }
 
- 
-
-        .coordinates p {
-
-            font-size: 14px;
-
-            color: var(--text-muted);
-
+        .map-marker-pin {
+            width: 20px;
+            height: 20px;
+            background: var(--highlight);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(61, 139, 201, 0.6);
         }
 
- 
+        .map-label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
 
-        .coordinates strong {
-
-            color: var(--text-light);
-
+        .map-coords {
             font-family: monospace;
+            font-size: 14px;
+            color: var(--highlight);
+        }
 
-            font-size: 16px;
+        .map-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
         }
 
  
@@ -1520,18 +1521,24 @@
 
         <div class="location-grid">
 
-            <div class="location-map">
-
-                <img src="assets/dominican-republic-map.webp" alt="Map showing Luperón location in Dominican Republic">
-
-                <div class="coordinates">
-
-                    <p>GPS Coordinates</p>
-
-                    <strong>19°53.68' N, 70°57.23' W</strong>
-
+            <div class="map-container">
+                <iframe
+                    class="google-map"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcKYHLfy5cl3bkEl-dLS8EYYDsyPNb2xo&q=19.89405,-70.95464&zoom=14&maptype=satellite"
+                    width="100%"
+                    height="500"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-overlay">
+                    <div class="map-marker-pin"></div>
+                    <div class="map-label">
+                        <span class="map-coords">19.89405° N, 70.95464° W</span>
+                        <span class="map-title">Tropical Marina</span>
+                    </div>
                 </div>
-
             </div>
 
             <div class="location-content">
