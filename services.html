@@ -1799,64 +1799,6 @@
             margin: 0 auto;
         }
 
-        /* Berthing Section */
-        .berthing-section {
-            background: var(--secondary-dark);
-        }
-
-        .berthing-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .berthing-content p {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 20px;
-        }
-
-        .berthing-specs {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .berthing-spec {
-            background: var(--primary-dark);
-            padding: 25px 30px;
-            text-align: center;
-            flex: 1;
-            min-width: 120px;
-            border-top: 3px solid var(--highlight);
-        }
-
-        .berthing-spec-value {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--highlight);
-            margin-bottom: 5px;
-        }
-
-        .berthing-spec-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-        }
-
-        .berthing-image img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
         /* Marina Facilities Grid */
         .marina-facilities {
             background: var(--primary-dark);
@@ -2110,7 +2052,6 @@
         }
 
         @media (max-width: 992px) {
-            .berthing-grid,
             .town-grid {
                 grid-template-columns: 1fr;
             }
@@ -2137,9 +2078,6 @@
             }
             .town-amenities {
                 grid-template-columns: repeat(2, 1fr);
-            }
-            .berthing-specs {
-                flex-direction: column;
             }
         }
 
